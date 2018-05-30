@@ -28,8 +28,10 @@ https.createServer(options,(req,res)=>{
 	});
   
   var q = url.parse(req.url,true);
-  if(Object.prototype.hasOwnProperty.call(q.query, 'lon')){
+  if(Object.prototype.hasOwnProperty.call(q.query, 'lon')&&
+     Object.prototype.hasOwnProperty.call(q.query, 'lon')){
     console.log(q.query.lon);
+    console.log(q.query.lat);
   }
   //var aJSON=JSON.parse(q.query);
   //var a=aJSON.a;
