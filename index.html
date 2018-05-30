@@ -1,0 +1,104 @@
+<doctype! html>
+<html>
+<head>
+  <meta charset="utf-8"/>
+  <link type="text/css" rel="stylesheet" href="sty.css">
+</head>
+<body>
+<div id="app">
+  <div class="mainInfo">
+    <img class="mainWeatherIcon" src="./pics/fair.png" />
+    <p class="weathermain">Clear</p>
+    <p class="city">city:country</p>
+  </div>
+  <div class="subInfo">
+    <div class="temp">25°C</div>
+    <div class="wind">wind:5</div>
+  </div>
+
+  <button class="btn-update" onclick="upup()">Update</button>
+  <button class="btn-update" onclick="testtest()">test</button>
+  <p class="editor">By:yemaoteng</p>
+  </br></br>
+  <div class="">
+    <p>Debug</p>
+    <p id="lat">lat</p>
+    <p id="lon">lon</p>
+    <p id="demo">demo</p>  
+  </div>
+</div>
+
+
+<script>
+var lat, lon, queryurl, country, city, temperature, windspeed, mainWeather;
+
+function upup() {
+  if (navigator.geolocation) {
+    console.log("navigator.geolocation>Enable!29333");
+    navigator.geolocation.getCurrentPosition(qqweather);
+    console.log("called qweather and wait");
+  }else{
+    console.log("can not get navigator.geolocation");
+  }
+  console.log("upup() end");
+}
+
+function showPosition(position) {
+  document.getElementById('lat').innerHTML=lat;
+  document.getElementById('lon').innerHTML=lon;
+}
+
+function testtest() {
+
+
+}
+
+function qqweather(position) {
+  console.log("position in");
+  
+  lat = position.coords.latitude;
+  lon = position.coords.longitude;
+  showPosition();
+  queryurl ="https://www.yemaoteng.tech:7788/?lon="+lon+"&lat="+lat;
+  console.log(queryurl);
+  
+  fetch(queryurl,{
+    method:'GET',
+    headers:{
+      "Content-Type":"application/json",
+      "Origin":"https://www.yemaoteng.tech",
+      "Access-Control-Request-Method":"GET",
+      "Access-Control-Request-Headers":"NCZ"
+    }
+  })
+  .then(function(res) {
+    console.log("fetch weather");
+    return res.json();
+  })
+  .then(function (data){
+    console.log(data);
+    displayWeather(data);    
+  })
+  .catch(function (err) {
+    console.error(err);
+  });
+  
+}
+
+function displayWeather(dadada){
+  console.log("display");
+  document.getElementsByClassName('city')[0].innerHTML=dadada.result.city;
+  document.getElementsByClassName('temp')[0].innerHTML=dadada.result.temp;
+  document.getElementsByClassName('weathermain')[0].innerHTML=dadada.result.weather;
+}
+
+function qweatherFail(position){
+  console.log("fail");
+}
+
+
+
+</script>
+
+</body>
+</html>

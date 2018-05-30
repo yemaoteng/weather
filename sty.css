@@ -1,0 +1,64 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    background-color:lightcoral;
+    color:white;
+    text-align: center;
+    border:1px solid green;
+    padding:0px;
+    margin:0;
+}
+
+.mainInfo {
+    text-align: center;
+}
+
+.subInfo {
+    display: block;
+    padding-top: 25px;
+    background-color: rgba(255,255,255,0.5);
+    width:100%;
+    height:100px;
+    margin-left: 0px;
+}
+
+.mainWeatherIcon {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+    max-width: 200px;
+}
+.bigIcon {
+
+}
+.clearfix {
+    overflow: auto;
+}
+
+.tem {
+    color:white;
+    width:49%;
+    float: left;
+    font-size: 30px;
+}
+.wind {
+    width:49%;
+    float: left;
+}
+.btn-update {
+    display: block;
+    margin-left: auto;
+    margin-right:auto;
+    margin-top: 30px;
+    border:1px solid white;
+    background-color: transparent;
+    color:white;
+    font-size:20px;
+}
+.btn-update:hover {
+    border:1px solid transparent;
+    background-color:rgba(255,255,255,0.5);
+}
