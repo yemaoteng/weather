@@ -2,8 +2,6 @@ var http = require('http');
 var https = require('https');
 var url = require('url');
 var fetch = require('node-fetch');
-//var express = require('express');
-//var app = express();
 var fs = require('fs');
 var key = fs.readFileSync('/etc/httpd/certs/214695288340202.key');
 var cert = fs.readFileSync('/etc/httpd/certs/public.pem');
@@ -17,6 +15,8 @@ var options = {
 var count = 1;
 var resJSON="";
 var city="";
+var lon=121.48;
+var lat=31.22;
 
 https.createServer(options,(req,res)=>{
 	res.writeHead(200,{
@@ -29,15 +29,18 @@ https.createServer(options,(req,res)=>{
   
   var q = url.parse(req.url,true);
   if(Object.prototype.hasOwnProperty.call(q.query, 'lon')&&
-     Object.prototype.hasOwnProperty.call(q.query, 'lon')){
+     Object.prototype.hasOwnProperty.call(q.query, 'lat')){
+    lon=q.query.lon;
+    lat=q.query.lat; 
     console.log(q.query.lon);
     console.log(q.query.lat);
   }
-  //var aJSON=JSON.parse(q.query);
-  //var a=aJSON.a;
-  //console.log(a);
+  //latitude纬度
+  //longitude经度
+  //阿里云的接口，lat+lon
   
-  queryurl ="http://jisutqybmf.market.alicloudapi.com/weather/query?location="+"40"+"%2C"+"116";
+  queryurl ="http://jisutqybmf.market.alicloudapi.com/weather/query?location="+lat+"%2C"+lon;
+  console.log(queryurl);
   fetch(queryurl,{
     method:'GET',
     headers:{
@@ -50,6 +53,7 @@ https.createServer(options,(req,res)=>{
   })
   .then(function(data) {
     resJSON = JSON.stringify(data);
+    console.log(resJSON);
     res.end(resJSON);
   })
   .catch(function (err) {
