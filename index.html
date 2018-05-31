@@ -49,11 +49,6 @@ function showPosition(position) {
   document.getElementById('lon').innerHTML=lon;
 }
 
-function testtest() {
-
-
-}
-
 function qqweather(position) {
   console.log("position in");
   
@@ -90,7 +85,9 @@ function displayWeather(dadada){
   console.log("display");
   document.getElementsByClassName('city')[0].innerHTML=dadada.result.city;
   document.getElementsByClassName('temp')[0].innerHTML=dadada.result.temp;
+  document.getElementsByClassName('wind')[0].innerHTML=dadada.result.windpower;
   document.getElementsByClassName('weathermain')[0].innerHTML=dadada.result.weather;
+ 
 }
 
 function qweatherFail(position){
