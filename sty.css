@@ -42,7 +42,7 @@ body {
     color:white;
     width:49%;
     float: left;
-    font-size: 30px;
+    font-size: 100px;
 }
 .wind {
     width:49%;
@@ -50,13 +50,15 @@ body {
 }
 .btn-update {
     display: block;
+    width:50%;
+    height:5%;
     margin-left: auto;
     margin-right:auto;
     margin-top: 30px;
     border:1px solid white;
     background-color: transparent;
     color:white;
-    font-size:20px;
+    font-size:100px;
 }
 .btn-update:hover {
     border:1px solid transparent;
