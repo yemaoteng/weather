@@ -8,30 +8,33 @@
 </head>
 <body>
 <div id="app">
-  <div class="mainInfo">
-    <img class="mainWeatherIcon" src="./pics/fair.png" />
-    <p class="weathermain">- - -</p>
+
+  <div class="cbg head clearfix">
     <p class="city">---定位中---</p>
-  </div>
-  <div class="subInfo">
     <div class="temp">温度：</div>
     <div class="wind">风速：</div>
   </div>
 
+  <div class="mainInfo">
+    <img class="mainWeatherIcon" src="./pics/fair.png" />
+    <p class="weathermain">- - -</p>
+  </div>
+
   <button class="btn-update" onclick="upup()">更新</button>
-  <button class="btn-update" onclick="displayWeather(shanghai)">上海</button>
-  <button class="btn-update" onclick="displayWeather(anshun)">安顺</button>
-  <div class="twoday">
+  <button class="btn-update" onclick="displayWeather(shanghai)">显示缓存上海</button>
+  <button class="btn-update" onclick="displayWeather(anshun)">fetch安顺</button>
+  
+  <div class="cbg twoday">
     <div class="today">today weather</div>
     <div class="tomorrow">tomorrow weather</div>
   </div>
-  <div class="24hours">
+  <div class="cbg 24hours">
     <p>24 hours</p>
   </div>
-  <div class="week">
+  <div class="cbg week">
     <p>week weather</p>
   </div>
-  <div class="life">
+  <div class="cbg life">
     <p>life index</p>
   </div>
 
