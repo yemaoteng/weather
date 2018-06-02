@@ -108,7 +108,7 @@
     </div>
   </div>
 
-  <div class="part cbg week">
+  <div class="part cbg days">
     <p>week weather</p>
     <div class="day">----</div>
     <div class="day">----</div>
@@ -122,31 +122,31 @@
     <p>life index</p>
     <div class="index_block">
       <div class="index_name col-3">空调指数</div>
-      <div class="index_text col-9">部分时间开启</div>
+      <div class="index_text col-9">----</div>
     </div>
     <div class="index_block">
-      <div class="index_name col-3">空调指数</div>
-      <div class="index_text col-9">部分时间开启</div>
+      <div class="index_name col-3">运动指数</div>
+      <div class="index_text col-9">----</div>
     </div>
     <div class="index_block">
-      <div class="index_name col-3">空调指数</div>
-      <div class="index_text col-9">部分时间开启</div>
+      <div class="index_name col-3">防紫外线</div>
+      <div class="index_text col-9">----</div>
     </div>
     <div class="index_block">
-      <div class="index_name col-3">空调指数</div>
-      <div class="index_text col-9">部分时间开启</div>
+      <div class="index_name col-3">感冒指数</div>
+      <div class="index_text col-9">----</div>
     </div>
     <div class="index_block">
-      <div class="index_name col-3">空调指数</div>
-      <div class="index_text col-9">部分时间开启</div>
+      <div class="index_name col-3">洗车指数</div>
+      <div class="index_text col-9">----</div>
     </div>
     <div class="index_block">
-      <div class="index_name col-3">空调指数</div>
-      <div class="index_text col-9">部分时间开启</div>
+      <div class="index_name col-3">污染扩散</div>
+      <div class="index_text col-9">----</div>
     </div>
     <div class="index_block">
-      <div class="index_name col-3">空调指数</div>
-      <div class="index_text col-9">部分时间开启</div>
+      <div class="index_name col-3">穿衣指数</div>
+      <div class="index_text col-9">----</div>
     </div>
   </div>
 
@@ -223,6 +223,10 @@ function displayWeather(dadada){
   document.getElementsByClassName('wind')[0].innerHTML="风速："+dadada.result.windpower;
   document.getElementsByClassName('weathermain')[0].innerHTML=dadada.result.weather+"°C";
  
+  for(let i=0;i<7;i++){
+    document.getElementsByClassName('index_name')[i].innerHTML = dadada.result.index[i].iname;
+    document.getElementsByClassName('index_text')[i].innerHTML = dadada.result.index[i].detail;
+  }
 }
 
 function qweatherFail(position){
