@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=0.5, maximum-scale=2.0, user-scalable=yes" />
   <link rel="shortcut icon" href="./weather.png">
   <link type="text/css" rel="stylesheet" href="sty.css">
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js"></script>
+  <!--<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js"></script>-->
 </head>
 <body>
 <div id="app">
@@ -29,7 +29,7 @@
   <button class="btn-update" onclick="displayWeather(anshun)">fetch安顺</button>
   
 
-  <div class="cbg twoday col-12">
+  <div class="part cbg twoday">
     <div class="today col-6">
       <p class=" col-6">今天</p>
       <p class=" col-6">32/25</p>
@@ -43,18 +43,43 @@
       <p class=" col-6">雨标</p>
     </div>
   </div>
-  <div class="cbg 24hours">
-    <p>24 hours</p>
+
+  <div class="part cbg hours">
+    <p>24小时预报</p>
+    <div class="hour">----</div>
+    <div class="hour">----</div>
+    <div class="hour">----</div>
+    <div class="hour">----</div>
+    <div class="hour">----</div>
+    <div class="hour">----</div>
+    <div class="hour">----</div>
+    <div class="hour">----</div>
+    <div class="hour">----</div>
+    <div class="hour">----</div>
+    <div class="hour">----</div>
+    <div class="hour">----</div>
+    <div class="hour">----</div>
+    <div class="hour">----</div>
+    <div class="hour">----</div>
+    <div class="hour">----</div>
+    <div class="hour">----</div>
+    <div class="hour">----</div>
+    <div class="hour">----</div>
+    <div class="hour">----</div>
+    <div class="hour">----</div>
+    <div class="hour">----</div>
+    <div class="hour">----</div>
+    <div class="hour">----</div>
   </div>
-  <div class="cbg week">
+  <div class="part cbg week">
     <p>week weather</p>
   </div>
-  <div class="cbg life">
+  <div class="part cbg life">
     <p>life index</p>
   </div>
 
   </br></br>
-  <div class="debug">
+  <div class="part debug">
       <p class="editor">By:yemaoteng</p>
     <p>Debug</p>
     <p id="lat">lat</p>
