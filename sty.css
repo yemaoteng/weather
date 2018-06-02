@@ -11,26 +11,25 @@ body {
     padding-top: 20px;
     margin:0;
 }
-
-/* For mobile phones: */
+/*
 [class*="col-"] {
     width: 100%;
 }
 @media only screen and (min-width: 200px) {
-    .col-1 {width: 8.33%;}
-    .col-2 {width: 16.66%;}
-    .col-3 {width: 25%;}
-    .col-4 {width: 33.33%;}
-    .col-5 {width: 41.66%;}
+    .col-1 {width: 8%;}
+    .col-2 {width: 16%;}
+    .col-3 {width: 24%;}
+    .col-4 {width: 33%;}
+    .col-5 {width: 41%;}
     .col-6 {width: 49%;}
-    .col-7 {width: 58.33%;}
-    .col-8 {width: 66.66%;}
-    .col-9 {width: 75%;}
-    .col-10 {width: 83.33%;}
-    .col-11 {width: 91.66%;}
+    .col-7 {width: 58%;}
+    .col-8 {width: 66%;}
+    .col-9 {width: 74%;}
+    .col-10 {width: 83%;}
+    .col-11 {width: 91%;}
     .col-12 {width: 100%;}
 }
-
+*/
 .part {
     width: 100%;
     margin-top: 10px;
@@ -92,7 +91,7 @@ body {
 
 
 .btn-update {
-    display: inline;
+    display: inline-block;
     width:30%;
     height:40px;
     margin-left: auto;
@@ -124,8 +123,42 @@ p {
     overflow-x: scroll;
 }
 
+.hours p {
+    text-align: left;
+}
+
 .hour {
     display: inline-block;
     width: 20px;
     height: 80px;
+}
+
+.week {
+    white-space: nowrap;
+    overflow-x: scroll;
+}
+
+.day {
+    display: inline-block;
+    width: 20px;
+    height: 80px;
+}
+
+.life {
+
+}
+
+.index_block {
+    width: 100%;    
+}
+
+.index_name {
+    display: inline-block;
+    height: 40px;
+}
+
+.index_text {
+    display: inline-block;
+
+    height: 40px;
 }
