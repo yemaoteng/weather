@@ -122,22 +122,20 @@ p {
     display: inline-block;
 }
 
-.hours {
-    white-space: nowrap;
-    overflow-x: scroll;
-}
-
 .section_title {
     text-align: left;
 }
 
+.hours {
+    white-space: nowrap;
+    overflow-x: scroll;
+}
 .hour {
     display: inline-block;
     white-space: initial;
     width: 50px;
     height: 100px;
 }
-
 .weather_icon {
     width: 100%;
     height: 50px;
@@ -157,31 +155,25 @@ p {
     white-space: nowrap;
     overflow-x: scroll;
 }
-
 .day {
     display: inline-block;
-    width: 20px;
-    height: 80px;
+    width: 60px;
+    height: 200px;
 }
 
-.life {
-
-}
 
 .index_block {
     width: 100%;  
     height: 75px;
     font-size: medium;
     overflow: hidden;
-
+    clear: both;
 }
-
 .index_name {
     float: left;
     width:20%;
     height:70px;
 }
-
 .index_text {
     float: left;
     text-align: left;
