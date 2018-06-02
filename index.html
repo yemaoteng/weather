@@ -5,12 +5,16 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=0.5, maximum-scale=2.0, user-scalable=yes" />
   <link rel="shortcut icon" href="./weather.png">
   <link type="text/css" rel="stylesheet" href="sty.css">
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js"></script>
 </head>
 <body>
 <div id="app">
 
   <div class="cbg head clearfix">
     <p class="city">---定位中---</p>
+  </div>
+
+  <div class="subInfo">
     <div class="temp">温度：</div>
     <div class="wind">风速：</div>
   </div>
@@ -24,9 +28,20 @@
   <button class="btn-update" onclick="displayWeather(shanghai)">显示缓存上海</button>
   <button class="btn-update" onclick="displayWeather(anshun)">fetch安顺</button>
   
-  <div class="cbg twoday">
-    <div class="today">today weather</div>
-    <div class="tomorrow">tomorrow weather</div>
+
+  <div class="cbg twoday col-12">
+    <div class="today col-6">
+      <p class=" col-6">今天</p>
+      <p class=" col-6">32/25</p>
+      <p class=" col-6">雨</p>
+      <p class=" col-6">雨标</p>
+    </div>
+    <div class="tomorrow col-6">
+      <p class=" col-6">明天</p>
+      <p class=" col-6">32/25</p>
+      <p class=" col-6">雨</p>
+      <p class=" col-6">雨标</p>
+    </div>
   </div>
   <div class="cbg 24hours">
     <p>24 hours</p>
