@@ -121,32 +121,32 @@
   <div class="part cbg life">
     <p>life index</p>
     <div class="index_block">
-      <div class="index_name col-3">空调指数</div>
-      <div class="index_text col-9">----</div>
+      <div class="index_name ">空调<br/>指数</div>
+      <div class="index_text ">----</div>
     </div>
     <div class="index_block">
-      <div class="index_name col-3">运动指数</div>
-      <div class="index_text col-9">----</div>
+      <div class="index_name ">运动<br/>指数</div>
+      <div class="index_text ">----</div>
     </div>
     <div class="index_block">
-      <div class="index_name col-3">防紫外线</div>
-      <div class="index_text col-9">----</div>
+      <div class="index_name ">防紫<br/>外线</div>
+      <div class="index_text ">----</div>
     </div>
     <div class="index_block">
-      <div class="index_name col-3">感冒指数</div>
-      <div class="index_text col-9">----</div>
+      <div class="index_name ">感冒<br/>指数</div>
+      <div class="index_text ">----</div>
     </div>
     <div class="index_block">
-      <div class="index_name col-3">洗车指数</div>
-      <div class="index_text col-9">----</div>
+      <div class="index_name ">洗车<br/>指数</div>
+      <div class="index_text ">----</div>
     </div>
     <div class="index_block">
-      <div class="index_name col-3">污染扩散</div>
-      <div class="index_text col-9">----</div>
+      <div class="index_name ">污染<br/>扩散</div>
+      <div class="index_text ">----</div>
     </div>
     <div class="index_block">
-      <div class="index_name col-3">穿衣指数</div>
-      <div class="index_text col-9">----</div>
+      <div class="index_name ">穿衣<br/>指数</div>
+      <div class="index_text ">----</div>
     </div>
   </div>
 
@@ -224,7 +224,6 @@ function displayWeather(dadada){
   document.getElementsByClassName('weathermain')[0].innerHTML=dadada.result.weather+"°C";
  
   for(let i=0;i<7;i++){
-    document.getElementsByClassName('index_name')[i].innerHTML = dadada.result.index[i].iname;
     document.getElementsByClassName('index_text')[i].innerHTML = dadada.result.index[i].detail;
   }
 }
