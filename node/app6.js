@@ -21,7 +21,7 @@ var lat=31.22;
 https.createServer(options,(req,res)=>{
 	res.writeHead(200,{
 		'Content-Type':'application/json',
-		'Access-Control-Allow-Origin':'https://www.yemaoteng.tech',
+		'Access-Control-Allow-Origin':'*',
 		'Access-COntrol-Allow-Methods':'GET',
 		'Access-Control-Allow-Headers':'NCZ,Origin, X-Requested-With, Content-Type, Accept, Connection, User-Agent, Cookie',
 		'Access-Control-Max-Age':1728000
