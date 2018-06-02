@@ -62,7 +62,18 @@ function displayWeather(dadada){
   for(let i=0;i<7;i++){
     document.getElementsByClassName('index_text')[i].innerHTML = dadada.result.index[i].detail;
   }
-
+  for(let j=0;j<7;j++){
+    document.getElementsByClassName('day_name')[j].innerHTML = dadada.result.daily[j].week;
+    document.getElementsByClassName('day_wtext')[j].innerHTML = dadada.result.daily[j].day.weather;
+    document.getElementsByClassName('day_wicon')[j].innerHTML = dadada.result.daily[j].day.img;
+    document.getElementsByClassName('day_wind')[j].innerHTML = dadada.result.daily[j].day.windpower;
+    document.getElementsByClassName('temphigh')[j].innerHTML = dadada.result.daily[j].day.temphigh;
+    document.getElementsByClassName('templow')[j].innerHTML = dadada.result.daily[j].night.templow;
+    document.getElementsByClassName('night_wind')[j].innerHTML = dadada.result.daily[j].night.templow;
+    document.getElementsByClassName('night_wicon')[j].innerHTML = dadada.result.daily[j].night.img;
+    document.getElementsByClassName('night_wtext')[j].innerHTML = dadada.result.daily[j].night.weather;
+  }
+  
 
 }
 
