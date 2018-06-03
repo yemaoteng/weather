@@ -10,37 +10,46 @@
 
 <div id="app">
 
-  <div class="cbg head">
+  <div class="head">
     <p class="city">定位中------</p>
   </div>
 
   <div class="main">
     <div class="clearfix">
-      <div class="main_temp">温度：</div>
-      <div class="main_wind">风速：</div>
-    </div>
-    <div class="clearfix">
+      <div class="main_temp">- - -</div>
       <p class="main_weather">- - -</p>
     </div>
     <div class="clearfix">
-      <img class="main_icon" src="./pics/fair.png" />
-      <button class="btn-update" onclick="upup()">更新</button>
+      <div class="main_winddirect floatleft">---</div>
+      <div class="main_windspeed floatleft">---</div>
+      <div class="main_humidity floatleft">---</div>
     </div>
+    <div class="clearfix">
+      <img class="main_icon" src="./pics/fair.png" />
+    </div>
+    <button class="btn-update" onclick="upup()">更新</button>
   </div>
 
-
-  <div class="part cbg twoday">
-    <div class="today col-6">
-      <p class="col-6">今天</p>
-      <p class="col-6">32/25</p>
-      <p class="col-6">雨</p>
-      <p class="col-6">雨标</p>
+  <div class="part cbg twoday clearfix">
+    <div class="today">
+      <div class="clearfix col-12">
+        <div class="col-6">今天</div>
+        <div class="today_temphl col-6">-/-</div>
+      </div>
+      <div class="clearfix col-12">
+        <div class="today_weather col-6">-</div>
+        <div class="today_icon col-6">雨标</div>
+      </div>
     </div>
-    <div class="tomorrow col-6">
-      <p class="col-6">明天</p>
-      <p class="col-6">32/25</p>
-      <p class="col-6">雨</p>
-      <p class="col-6">雨标</p>
+    <div class="tomorrow">
+      <div class="clearfix col-12">
+        <div class="col-6">明天</div>
+        <div class="tomorrow_temphl col-6">-/-</div>
+      </div>
+      <div class="clearfix col-12">
+        <div class="tomorrow_weather col-6">-</div>
+        <div class="tomorrow_icon col-6">雨标</div>
+      </div>
     </div>
   </div>
 

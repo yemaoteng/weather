@@ -54,14 +54,24 @@ function qqweather(position) {
 
 function displayWeather(dadada){
   console.log("display");
+
+  //处理主要显示内容
   document.getElementsByClassName('city')[0].innerHTML=dadada.result.city;
-  document.getElementsByClassName('main_temp')[0].innerHTML=dadada.result.temp;
-  document.getElementsByClassName('wind')[0].innerHTML="风速："+dadada.result.windpower;
-  document.getElementsByClassName('weathermain')[0].innerHTML=dadada.result.weather+"°C";
+  document.getElementsByClassName('main_temp')[0].innerHTML=dadada.result.temp+"°C";
+  document.getElementsByClassName('main_weather')[0].innerHTML=dadada.result.weather;
+  document.getElementsByClassName('main_winddirect')[0].innerHTML = dadada.result.winddirect;
+  document.getElementsByClassName('main_windspeed')[0].innerHTML=' '+dadada.result.windspeed+'m/s';
+  document.getElementsByClassName('main_humidity')[0].innerHTML=" 湿度："+dadada.result.humidity+'%';
+  
+  //处理今明两天显示
+  document.getElementsByClassName('today_temphl')[0].innerHTML=dadada.result.daily[0].day.temphigh+'~'+dadada.result.daily[0].night.templow;
+  document.getElementsByClassName('today_weather')[0].innerHTML = dadada.result.daily[0].day.weather;
+  document.getElementsByClassName('today_icon')[0].innerHTML = dadada.result.daily[0].day.img;
+  document.getElementsByClassName('tomorrow_temphl')[0].innerHTML=dadada.result.daily[1].day.temphigh+'~'+dadada.result.daily[1].night.templow;                                                          
+  document.getElementsByClassName('tomorrow_weather')[0].innerHTML = dadada.result.daily[1].day.weather;
+  document.getElementsByClassName('tomorrow_icon')[0].innerHTML = dadada.result.daily[1].day.img;
  
-  for(let i=0;i<7;i++){
-    document.getElementsByClassName('index_text')[i].innerHTML = dadada.result.index[i].detail;
-  }
+  //处理24小时天气预报
   for(let j=0;j<7;j++){
     document.getElementsByClassName('day_name')[j].innerHTML = dadada.result.daily[j].week;
     document.getElementsByClassName('day_wtext')[j].innerHTML = dadada.result.daily[j].day.weather;
@@ -73,6 +83,13 @@ function displayWeather(dadada){
     document.getElementsByClassName('night_wicon')[j].innerHTML = dadada.result.daily[j].night.img;
     document.getElementsByClassName('night_wtext')[j].innerHTML = dadada.result.daily[j].night.weather;
   }
+
+  //处理一周天气预报
+  for(let i=0;i<7;i++){
+    document.getElementsByClassName('index_text')[i].innerHTML = dadada.result.index[i].detail;
+  }
+
+  //处理生活指数
   for(let k=0;k<24;k++){
     document.getElementsByClassName('hour_icon')[k].innerHTML = dadada.result.hourly[k].img;
     document.getElementsByClassName('hour_temp')[k].innerHTML = dadada.result.hourly[k].temp;
