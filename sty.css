@@ -11,27 +11,33 @@ body {
     padding-top: 20px;
     margin:0;
 }
-/*
+
 div {
     border:1px solid dodgerblue;
 }
-*/
+
 [class*="col-"] {
     width: 100%;
 }
-@media only screen and (min-width: 200px) {
-    .col-1 {width: 8%;}
-    .col-2 {width: 15%;}
-    .col-3 {width: 24%;}
-    .col-4 {width: 33%;}
-    .col-5 {width: 41%;}
-    .col-6 {width: 48%;}
-    .col-7 {width: 58%;}
-    .col-8 {width: 66%;}
-    .col-9 {width: 74%;}
-    .col-10 {width: 83%;}
-    .col-11 {width: 91%;}
-    .col-12 {width: 100%;}
+@media only screen and (min-width: 200px) {}
+
+.col-1 {width: 8%;}
+.col-2 {width: 15%;}
+.col-3 {width: 24%;}
+.col-4 {width: 33%;}
+.col-5 {width: 41%;}
+.col-6 {width: 48%;}
+.col-7 {width: 58%;}
+.col-8 {width: 66%;}
+.col-9 {width: 74%;}
+.col-10 {width: 83%;}
+.col-11 {width: 91%;}
+.col-12 {width: 100%;}
+
+.clearfix::after {
+    content: "";
+    clear: both;
+    display: table;
 }
 
 .part {
@@ -42,32 +48,42 @@ div {
 }
 
 
+.head {
+    width: 100%;
+    height: 60px;
+    text-align: left;
+    overflow: hidden;
+    clear: both;
 
-
-.main_temp {
-    color:white;
-    width:49%;
-    float: left;
-    font-size: 20px;
-}
-.wind {
-    color:white;
-    width:49%;
-    float: left;
-    font-size: 20px;
 }
 
-.mainInfo {
-    text-align: center;
+.main {
+    width: 100%;
+    height: 400px;
 }
-
 .subInfo {
     display: block;
-    padding-top: 25px;
-    width:100%;
+    float: left;
+    width:50%;
     height:80px;
     margin-left: 0px;
 }
+.main_temp {
+    width:49%;
+    float: left;
+    font-size: 40px;
+}
+.main_weather {
+    float:left;
+}
+.main_wind {
+    width:49%;
+    float: left;
+    font-size: 20px;
+}
+
+
+
 
 .debug {
     visibility: hidden;
