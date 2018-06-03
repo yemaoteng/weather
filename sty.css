@@ -67,7 +67,7 @@ div {
     margin-left: 0px;
 }
 .main_temp {
-    width:49%;
+    width:20%;
     float: left;
     font-size: 40px;
 }
@@ -75,7 +75,7 @@ div {
     float:left;
 }
 .main_wind {
-    width:49%;
+    width:30%;
     float: left;
     font-size: 20px;
 }
