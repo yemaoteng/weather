@@ -55,7 +55,7 @@ function qqweather(position) {
 function displayWeather(dadada){
   console.log("display");
   document.getElementsByClassName('city')[0].innerHTML=dadada.result.city;
-  document.getElementsByClassName('temp')[0].innerHTML=dadada.result.temp;
+  document.getElementsByClassName('main_temp')[0].innerHTML=dadada.result.temp;
   document.getElementsByClassName('wind')[0].innerHTML="风速："+dadada.result.windpower;
   document.getElementsByClassName('weathermain')[0].innerHTML=dadada.result.weather+"°C";
  
@@ -72,6 +72,12 @@ function displayWeather(dadada){
     document.getElementsByClassName('night_wind')[j].innerHTML = dadada.result.daily[j].night.templow;
     document.getElementsByClassName('night_wicon')[j].innerHTML = dadada.result.daily[j].night.img;
     document.getElementsByClassName('night_wtext')[j].innerHTML = dadada.result.daily[j].night.weather;
+  }
+  for(let k=0;k<24;k++){
+    document.getElementsByClassName('hour_icon')[k].innerHTML = dadada.result.hourly[k].img;
+    document.getElementsByClassName('hour_temp')[k].innerHTML = dadada.result.hourly[k].temp;
+    document.getElementsByClassName('hour_weather')[k].innerHTML = dadada.result.hourly[k].weather;
+    document.getElementsByClassName('hour_time')[k].innerHTML = dadada.result.hourly[k].time;
   }
   
 

@@ -11,11 +11,11 @@ body {
     padding-top: 20px;
     margin:0;
 }
-
+/*
 div {
     border:1px solid dodgerblue;
 }
-
+*/
 [class*="col-"] {
     width: 100%;
 }
@@ -134,19 +134,25 @@ p {
     display: inline-block;
     white-space: initial;
     width: 50px;
-    height: 100px;
+    height: 150px;
 }
-.weather_icon {
+.hour_icon {
     width: 100%;
     height: 50px;
 }
-.hour.temp {
+.hour_temp {
     margin-left: auto;
     margin-right: auto;
     width:100%;
     height: 25px;    
 }
-.hour.time {
+.hour_weather {
+    margin-left: auto;
+    margin-right: auto;
+    width:100%;
+    height: 50px;    
+}
+.hour_time {
     width :100%;
     height: 25px;
 }
