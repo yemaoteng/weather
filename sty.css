@@ -62,10 +62,8 @@ div {
     height: 400px;
 }
 .subInfo {
-    display: block;
-    float: left;
     width:50%;
-    height:80px;
+    height:100px;
     margin-left: 0px;
 }
 .main_temp {
@@ -202,4 +200,5 @@ p {
     width:80%;
     height:70px;
     overflow: hidden;
+    
 }
