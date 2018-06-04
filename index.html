@@ -11,7 +11,8 @@
 <div id="app">
 
   <div class="head">
-    <p class="city">定位中------</p>
+    <div class="dark"></div>
+    <div class="city">定位中------</div>
   </div>
 
   <div class="main">
@@ -30,7 +31,7 @@
     <button class="btn-update" onclick="upup()">更新</button>
   </div>
 
-  <div class="part cbg twoday clearfix">
+  <div class="part  twoday clearfix">
     <div class="today">
       <div class="clearfix col-12">
         <div class="col-6">今天</div>
@@ -53,7 +54,7 @@
     </div>
   </div>
 
-  <div class="part cbg hours">
+  <div class="part  hours">
     <p class="section_title">24小时预报</p>
     <div class="hour">
       <img class="hour_icon" src="./pics/99.png">
@@ -201,7 +202,7 @@
     </div>
   </div>
 
-  <div class="part cbg weeks">
+  <div class="part  weeks">
     <p>week weather</p>
     <div class="week">
       <div class="week_name">星期一</div>
@@ -281,7 +282,7 @@
       <div class="week_night_weather">下雪</div>
     </div> 
   </div>
-  <div class="part cbg life">
+  <div class="part  life">
     <p>life index</p>
     <div class="index_block">
       <div class="index_name ">空调<br/>指数</div>
@@ -313,7 +314,6 @@
     </div>
   </div>
 
-  </br></br>
   <div class="part">
     <button class="btn-update" onclick="displayWeather(shanghai)">缓存上海</button>
     <button class="btn-update" onclick="displayWeather(anshun)">fetch安顺</button>
@@ -321,6 +321,7 @@
     <p id="lat">lat</p>
     <p id="lon">lon</p>
   </div>
+
 </div>
 
 
