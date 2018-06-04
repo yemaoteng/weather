@@ -45,6 +45,11 @@ div {
     float: left;
 }
 
+#app {
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+}
 
 .part {
     width: 100%;
