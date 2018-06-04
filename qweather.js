@@ -62,40 +62,44 @@ function displayWeather(dadada){
   document.getElementsByClassName('main_winddirect')[0].innerHTML = dadada.result.winddirect;
   document.getElementsByClassName('main_windspeed')[0].innerHTML=' '+dadada.result.windspeed+'m/s';
   document.getElementsByClassName('main_humidity')[0].innerHTML=" 湿度："+dadada.result.humidity+'%';
-  
+  document.getElementsByClassName('main_icon')[0].src='./pics/'+dadada.result.img+'.png';
+
   //处理今明两天显示
   document.getElementsByClassName('today_temphl')[0].innerHTML=dadada.result.daily[0].day.temphigh+'~'+dadada.result.daily[0].night.templow;
   document.getElementsByClassName('today_weather')[0].innerHTML = dadada.result.daily[0].day.weather;
-  document.getElementsByClassName('today_icon')[0].innerHTML = dadada.result.daily[0].day.img;
+  document.getElementsByClassName('today_icon')[0].src = "./pics/"+dadada.result.daily[0].day.img+".png";
   document.getElementsByClassName('tomorrow_temphl')[0].innerHTML=dadada.result.daily[1].day.temphigh+'~'+dadada.result.daily[1].night.templow;                                                          
   document.getElementsByClassName('tomorrow_weather')[0].innerHTML = dadada.result.daily[1].day.weather;
-  document.getElementsByClassName('tomorrow_icon')[0].innerHTML = dadada.result.daily[1].day.img;
+  document.getElementsByClassName('tomorrow_icon')[0].src = "./pics/"+dadada.result.daily[1].day.img+".png";
  
-  //处理24小时天气预报
-  for(let j=0;j<7;j++){
-    document.getElementsByClassName('day_name')[j].innerHTML = dadada.result.daily[j].week;
-    document.getElementsByClassName('day_wtext')[j].innerHTML = dadada.result.daily[j].day.weather;
-    document.getElementsByClassName('day_wicon')[j].innerHTML = dadada.result.daily[j].day.img;
-    document.getElementsByClassName('day_wind')[j].innerHTML = dadada.result.daily[j].day.windpower;
-    document.getElementsByClassName('temphigh')[j].innerHTML = dadada.result.daily[j].day.temphigh;
-    document.getElementsByClassName('templow')[j].innerHTML = dadada.result.daily[j].night.templow;
-    document.getElementsByClassName('night_wind')[j].innerHTML = dadada.result.daily[j].night.templow;
-    document.getElementsByClassName('night_wicon')[j].innerHTML = dadada.result.daily[j].night.img;
-    document.getElementsByClassName('night_wtext')[j].innerHTML = dadada.result.daily[j].night.weather;
-  }
-
-  //处理一周天气预报
-  for(let i=0;i<7;i++){
-    document.getElementsByClassName('index_text')[i].innerHTML = dadada.result.index[i].detail;
-  }
-
-  //处理生活指数
+  //处理24小时天气预报    
   for(let k=0;k<24;k++){
-    document.getElementsByClassName('hour_icon')[k].innerHTML = dadada.result.hourly[k].img;
+    document.getElementsByClassName('hour_icon')[k].src = "./pics/"+dadada.result.hourly[k].img+".png";
     document.getElementsByClassName('hour_temp')[k].innerHTML = dadada.result.hourly[k].temp;
     document.getElementsByClassName('hour_weather')[k].innerHTML = dadada.result.hourly[k].weather;
     document.getElementsByClassName('hour_time')[k].innerHTML = dadada.result.hourly[k].time;
   }
+
+
+  //处理一周天气预报
+  for(let j=0;j<7;j++){
+    document.getElementsByClassName('week_name')[j].innerHTML = dadada.result.daily[j].week;
+    document.getElementsByClassName('week_day_weather')[j].innerHTML = dadada.result.daily[j].day.weather;
+    document.getElementsByClassName('week_day_icon')[j].src = "./pics/"+dadada.result.daily[j].day.img+".png";
+    document.getElementsByClassName('week_day_wind')[j].innerHTML = dadada.result.daily[j].day.windpower;
+    document.getElementsByClassName('week_day_temphigh')[j].innerHTML = dadada.result.daily[j].day.temphigh+"°C";
+    document.getElementsByClassName('week_night_templow')[j].innerHTML = dadada.result.daily[j].night.templow+"°C";
+    document.getElementsByClassName('week_night_wind')[j].innerHTML = dadada.result.daily[j].night.windpower;
+    document.getElementsByClassName('week_night_icon')[j].src = "./pics/"+dadada.result.daily[j].night.img+".png";
+    document.getElementsByClassName('week_night_weather')[j].innerHTML = dadada.result.daily[j].night.weather;
+  }
+
+  //处理生活指数
+  for(let i=0;i<7;i++){
+    document.getElementsByClassName('index_text')[i].innerHTML = dadada.result.index[i].detail;
+  }
+
+
   
 
 }
