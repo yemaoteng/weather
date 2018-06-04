@@ -19,9 +19,9 @@ body {
     margin:0;
 }
 
-
+/*
 div {
-    border:1px solid dodgerblue;
+    border:1px solid yellowgreen;
 }
 /*
 [class*="col-"] {
@@ -100,16 +100,14 @@ div {
     margin-top:40px;
 }
 .main_temp {
-    width:20%;
     float: left;
-    font-size: 30px;
+    text-align: left;
+    font-size: 50px;
 }
 .main_weather {
     float:left;
 }
-.main_winddirect {
-    float: left;
-}
+
 .main_icon {
     width: 50%;
     max-width: 250px;
@@ -151,6 +149,14 @@ div {
 .today div {
     float: left;
 }
+.today_icon {
+    height: 20px;
+    width: 20px;
+}
+.tomorrow_icon {
+    height: 20px;
+    width: 20px;
+}
 .tomorrow {
     width:50%;
     float: left;
@@ -174,6 +180,7 @@ div {
 }
 .hour_icon {
     width: 100%;
+    padding: 2px;
 }
 .hour_temp {
     margin-left: auto;
@@ -195,11 +202,16 @@ div {
 .weeks {
     white-space: nowrap;
     overflow-x: scroll;
+    overflow-y: hidden;
 }
 .week {
     display: inline-block;
     width: 60px;
     height: 200px;
+}
+.weeks [class$="icon"] {
+    width: 100%;
+    padding:5px;
 }
 /*****************************************生活指数*/
 
