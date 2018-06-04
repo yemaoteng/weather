@@ -11,6 +11,7 @@ body {
     padding-top: 20px;
     margin:0;
 }
+
 /*
 div {
     border:1px solid dodgerblue;
@@ -21,6 +22,7 @@ div {
 }
 @media only screen and (min-width: 200px) {}
 */
+
 .col-1 {width: 8.33%;}
 .col-2 {width: 16.66%;}
 .col-3 {width: 25%;}
