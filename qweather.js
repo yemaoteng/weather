@@ -5,6 +5,16 @@ var anshun = JSON.parse('{"status":"0","msg":"ok","result":{"city":"安顺","cit
 
 upup();
 
+var example1 = new Vue({
+  el: '#example-1',
+  data: {
+    items: [
+      { message: 'Foo' },
+      { message: 'Bar' }
+    ]
+  }
+})
+
 function upup() {
   if (navigator.geolocation) {
     console.log("navigator.geolocation>Enable!29333");
