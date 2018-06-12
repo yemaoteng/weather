@@ -8,17 +8,17 @@
 </head>
 <body>
 
+<div class="out_dark"></div>
 <div id="app">
-
   <div class="head">
-    <div class="dark"></div>
-    <div class="city">定位中------</div>
+      <div class="dark"></div>
+      <div class="head city">定位中------</div>
   </div>
 
   <div class="main">
     <div class="clearfix">
       <div class="main_temp">- - -</div>
-      <p class="main_weather">- - -</p>
+      <div class="main_weather">- - -</div>
     </div>
     <div class="clearfix">
       <div class="main_winddirect floatleft">---</div>
@@ -31,179 +31,182 @@
     <button class="btn-update" onclick="upup()">更新</button>
   </div>
 
-  <div class="part  twoday clearfix">
+  <div class="twoday clearfix">
     <div class="today">
       <div class="clearfix col-12">
-        <div class="col-6">今天</div>
-        <div class="today_temphl col-6">-/-</div>
+        <div class="twoday_height col-6">今天</div>
+        <div class="twoday_height today_temphl col-6">-/-</div>
       </div>
       <div class="clearfix col-12">
-        <div class="today_weather col-6">-</div>
-        <div class="col-6">
+        <div class="twoday_height today_weather col-6">-</div>
+        <div class="twoday_height col-6">
             <img class="today_icon" src="./pics/99.png">
         </div>
       </div>
     </div>
     <div class="tomorrow">
       <div class="clearfix col-12">
-        <div class="col-6">明天</div>
-        <div class="tomorrow_temphl col-6">-/-</div>
+        <div class="twoday_height col-6">明天</div>
+        <div class="twoday_height tomorrow_temphl col-6">-/-</div>
       </div>
       <div class="clearfix col-12">
-        <div class="tomorrow_weather col-6">-</div>
-        <div class="col-6">
+        <div class="twoday_height tomorrow_weather col-6">-</div>
+        <div class="twoday_height col-6">
             <img class="tomorrow_icon col-6" src="./pics/99.png">
         </div>        
       </div>
     </div>
   </div>
 
-  <div class="part  hours">
-    <p class="hours_title">24小时预报</p>
-    <div class="hour">
-      <img class="hour_icon" src="./pics/99.png">
-      <div class="hour_temp">27</div>
-      <div class="hour_weather">雷</div>
-      <div class="hour_time">22:00</div>
-    </div>
-    <div class="hour">
-      <img class="hour_icon" src="./pics/99.png">
-      <div class="hour_temp">27</div>
-      <div class="hour_weather">雷</div>
-      <div class="hour_time">22:00</div>
-    </div>
-    <div class="hour">
-      <img class="hour_icon" src="./pics/99.png">
-      <div class="hour_temp">27</div>
-      <div class="hour_weather">雷</div>
-      <div class="hour_time">22:00</div>
-    </div>
+  <div class="hours">
+    <div class="hours_title">24小时预报</div>
+    <div class="hours_block">
       <div class="hour">
-      <img class="hour_icon" src="./pics/99.png">
-      <div class="hour_temp">27</div>
-      <div class="hour_weather">雷</div>
-      <div class="hour_time">22:00</div>
-    </div>
-    <div class="hour">
-      <img class="hour_icon" src="./pics/99.png">
-      <div class="hour_temp">27</div>
-      <div class="hour_weather">雷</div>
-      <div class="hour_time">22:00</div>
-    </div>
-    <div class="hour">
-      <img class="hour_icon" src="./pics/99.png">
-      <div class="hour_temp">27</div>
-      <div class="hour_weather">雷</div>
-      <div class="hour_time">22:00</div>
-    </div>
-    <div class="hour">
-      <img class="hour_icon" src="./pics/99.png">
-      <div class="hour_temp">27</div>
-      <div class="hour_weather">雷</div>
-      <div class="hour_time">22:00</div>
-    </div>
-    <div class="hour">
-      <img class="hour_icon" src="./pics/99.png">
-      <div class="hour_temp">27</div>
-      <div class="hour_weather">雷</div>
-      <div class="hour_time">22:00</div>
-    </div>
-    <div class="hour">
-      <img class="hour_icon" src="./pics/99.png">
-      <div class="hour_temp">27</div>
-      <div class="hour_weather">雷</div>
-      <div class="hour_time">22:00</div>
-    </div>
+        <img class="hour_icon" src="./pics/99.png">
+        <div class="hour_temp">27</div>
+        <div class="hour_weather">雷</div>
+        <div class="hour_time">22:00</div>
+      </div>
       <div class="hour">
-      <img class="hour_icon" src="./pics/99.png">
-      <div class="hour_temp">27</div>
-      <div class="hour_weather">雷</div>
-      <div class="hour_time">22:00</div>
-    </div>
-    <div class="hour">
-      <img class="hour_icon" src="./pics/99.png">
-      <div class="hour_temp">27</div>
-      <div class="hour_weather">雷</div>
-      <div class="hour_time">22:00</div>
-    </div>
-    <div class="hour">
-      <img class="hour_icon" src="./pics/99.png">
-      <div class="hour_temp">27</div>
-      <div class="hour_weather">雷</div>
-      <div class="hour_time">22:00</div>
-    </div>
-    <div class="hour">
-      <img class="hour_icon" src="./pics/99.png">
-      <div class="hour_temp">27</div>
-      <div class="hour_weather">雷</div>
-      <div class="hour_time">22:00</div>
-    </div>
-    <div class="hour">
-      <img class="hour_icon" src="./pics/99.png">
-      <div class="hour_temp">27</div>
-      <div class="hour_weather">雷</div>
-      <div class="hour_time">22:00</div>
-    </div>
-    <div class="hour">
-      <img class="hour_icon" src="./pics/99.png">
-      <div class="hour_temp">27</div>
-      <div class="hour_weather">雷</div>
-      <div class="hour_time">22:00</div>
-    </div>
+        <img class="hour_icon" src="./pics/99.png">
+        <div class="hour_temp">27</div>
+        <div class="hour_weather">雷</div>
+        <div class="hour_time">22:00</div>
+      </div>
       <div class="hour">
-      <img class="hour_icon" src="./pics/99.png">
-      <div class="hour_temp">27</div>
-      <div class="hour_weather">雷</div>
-      <div class="hour_time">22:00</div>
-    </div>
-    <div class="hour">
-      <img class="hour_icon" src="./pics/99.png">
-      <div class="hour_temp">27</div>
-      <div class="hour_weather">雷</div>
-      <div class="hour_time">22:00</div>
-    </div>
-    <div class="hour">
-      <img class="hour_icon" src="./pics/99.png">
-      <div class="hour_temp">27</div>
-      <div class="hour_weather">雷</div>
-      <div class="hour_time">22:00</div>
-    </div>
-    <div class="hour">
-      <img class="hour_icon" src="./pics/99.png">
-      <div class="hour_temp">27</div>
-      <div class="hour_weather">雷</div>
-      <div class="hour_time">22:00</div>
-    </div>
-    <div class="hour">
-      <img class="hour_icon" src="./pics/99.png">
-      <div class="hour_temp">27</div>
-      <div class="hour_weather">雷</div>
-      <div class="hour_time">22:00</div>
-    </div>
-    <div class="hour">
-      <img class="hour_icon" src="./pics/99.png">
-      <div class="hour_temp">27</div>
-      <div class="hour_weather">雷</div>
-      <div class="hour_time">22:00</div>
-    </div>
+        <img class="hour_icon" src="./pics/99.png">
+        <div class="hour_temp">27</div>
+        <div class="hour_weather">雷</div>
+        <div class="hour_time">22:00</div>
+      </div>
+        <div class="hour">
+        <img class="hour_icon" src="./pics/99.png">
+        <div class="hour_temp">27</div>
+        <div class="hour_weather">雷</div>
+        <div class="hour_time">22:00</div>
+      </div>
       <div class="hour">
-      <img class="hour_icon" src="./pics/99.png">
-      <div class="hour_temp">27</div>
-      <div class="hour_weather">雷</div>
-      <div class="hour_time">22:00</div>
+        <img class="hour_icon" src="./pics/99.png">
+        <div class="hour_temp">27</div>
+        <div class="hour_weather">雷</div>
+        <div class="hour_time">22:00</div>
+      </div>
+      <div class="hour">
+        <img class="hour_icon" src="./pics/99.png">
+        <div class="hour_temp">27</div>
+        <div class="hour_weather">雷</div>
+        <div class="hour_time">22:00</div>
+      </div>
+      <div class="hour">
+        <img class="hour_icon" src="./pics/99.png">
+        <div class="hour_temp">27</div>
+        <div class="hour_weather">雷</div>
+        <div class="hour_time">22:00</div>
+      </div>
+      <div class="hour">
+        <img class="hour_icon" src="./pics/99.png">
+        <div class="hour_temp">27</div>
+        <div class="hour_weather">雷</div>
+        <div class="hour_time">22:00</div>
+      </div>
+      <div class="hour">
+        <img class="hour_icon" src="./pics/99.png">
+        <div class="hour_temp">27</div>
+        <div class="hour_weather">雷</div>
+        <div class="hour_time">22:00</div>
+      </div>
+        <div class="hour">
+        <img class="hour_icon" src="./pics/99.png">
+        <div class="hour_temp">27</div>
+        <div class="hour_weather">雷</div>
+        <div class="hour_time">22:00</div>
+      </div>
+      <div class="hour">
+        <img class="hour_icon" src="./pics/99.png">
+        <div class="hour_temp">27</div>
+        <div class="hour_weather">雷</div>
+        <div class="hour_time">22:00</div>
+      </div>
+      <div class="hour">
+        <img class="hour_icon" src="./pics/99.png">
+        <div class="hour_temp">27</div>
+        <div class="hour_weather">雷</div>
+        <div class="hour_time">22:00</div>
+      </div>
+      <div class="hour">
+        <img class="hour_icon" src="./pics/99.png">
+        <div class="hour_temp">27</div>
+        <div class="hour_weather">雷</div>
+        <div class="hour_time">22:00</div>
+      </div>
+      <div class="hour">
+        <img class="hour_icon" src="./pics/99.png">
+        <div class="hour_temp">27</div>
+        <div class="hour_weather">雷</div>
+        <div class="hour_time">22:00</div>
+      </div>
+      <div class="hour">
+        <img class="hour_icon" src="./pics/99.png">
+        <div class="hour_temp">27</div>
+        <div class="hour_weather">雷</div>
+        <div class="hour_time">22:00</div>
+      </div>
+        <div class="hour">
+        <img class="hour_icon" src="./pics/99.png">
+        <div class="hour_temp">27</div>
+        <div class="hour_weather">雷</div>
+        <div class="hour_time">22:00</div>
+      </div>
+      <div class="hour">
+        <img class="hour_icon" src="./pics/99.png">
+        <div class="hour_temp">27</div>
+        <div class="hour_weather">雷</div>
+        <div class="hour_time">22:00</div>
+      </div>
+      <div class="hour">
+        <img class="hour_icon" src="./pics/99.png">
+        <div class="hour_temp">27</div>
+        <div class="hour_weather">雷</div>
+        <div class="hour_time">22:00</div>
+      </div>
+      <div class="hour">
+        <img class="hour_icon" src="./pics/99.png">
+        <div class="hour_temp">27</div>
+        <div class="hour_weather">雷</div>
+        <div class="hour_time">22:00</div>
+      </div>
+      <div class="hour">
+        <img class="hour_icon" src="./pics/99.png">
+        <div class="hour_temp">27</div>
+        <div class="hour_weather">雷</div>
+        <div class="hour_time">22:00</div>
+      </div>
+      <div class="hour">
+        <img class="hour_icon" src="./pics/99.png">
+        <div class="hour_temp">27</div>
+        <div class="hour_weather">雷</div>
+        <div class="hour_time">22:00</div>
+      </div>
+        <div class="hour">
+        <img class="hour_icon" src="./pics/99.png">
+        <div class="hour_temp">27</div>
+        <div class="hour_weather">雷</div>
+        <div class="hour_time">22:00</div>
+      </div>
+      <div class="hour">
+        <img class="hour_icon" src="./pics/99.png">
+        <div class="hour_temp">27</div>
+        <div class="hour_weather">雷</div>
+        <div class="hour_time">22:00</div>
+      </div>
+      <div class="hour">
+        <img class="hour_icon" src="./pics/99.png">
+        <div class="hour_temp">27</div>
+        <div class="hour_weather">雷</div>
+        <div class="hour_time">22:00</div>
+      </div>
     </div>
-    <div class="hour">
-      <img class="hour_icon" src="./pics/99.png">
-      <div class="hour_temp">27</div>
-      <div class="hour_weather">雷</div>
-      <div class="hour_time">22:00</div>
-    </div>
-    <div class="hour">
-      <img class="hour_icon" src="./pics/99.png">
-      <div class="hour_temp">27</div>
-      <div class="hour_weather">雷</div>
-      <div class="hour_time">22:00</div>
-    </div>
+
   </div>
 
   <div class="part  weeks">
@@ -286,8 +289,8 @@
       <div class="week_night_weather">下雪</div>
     </div> 
   </div>
-  <div class="part  life">
-    <p>life index</p>
+  <div class="indexs">
+    <div class="index_title">生活指数</div>
     <div class="index_block">
       <div class="index_name ">空调<br/>指数</div>
       <div class="index_text ">----</div>
@@ -318,10 +321,12 @@
     </div>
   </div>
 
-  <div class="part">
+  <p class="editor">By: yemaoteng</p>
+
+  <div class="part debug">
     <button class="btn-update" onclick="displayWeather(shanghai)">缓存上海</button>
     <button class="btn-update" onclick="displayWeather(anshun)">fetch安顺</button>
-    <p class="editor">By:yemaoteng</p>
+
     <p id="lat">lat</p>
     <p id="lon">lon</p>
   </div>
