@@ -1,0 +1,345 @@
+<doctype! html>
+<html>
+<head>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=0.5, maximum-scale=2.0, user-scalable=yes" />
+  <link rel="shortcut icon" href="./weather.png">
+  <link type="text/css" rel="stylesheet" href="sty.css"> 
+</head>
+<body>
+
+<div class="out_dark"></div>
+<div id="app">
+  <div class="head">
+      <div class="dark"></div>
+      <div class="head city">定位中------</div>
+  </div>
+
+  <div class="main">
+    <div class="clearfix">
+      <div class="main_temp">- - -</div>
+      <div class="main_weather">- - -</div>
+    </div>
+    <div class="clearfix">
+      <div class="main_winddirect floatleft">---</div>
+      <div class="main_windspeed floatleft">---</div>
+      <div class="main_humidity floatleft">---</div>
+    </div>
+    <div class="clearfix">
+      <img class="main_icon" src="./pics/99.png" />
+    </div>
+    <button class="btn-update" onclick="upup()">更新</button>
+  </div>
+
+  <div class="twoday clearfix">
+    <div class="today">
+      <div class="clearfix col-12">
+        <div class="twoday_height col-6">今天</div>
+        <div class="twoday_height today_temphl col-6">-/-</div>
+      </div>
+      <div class="clearfix col-12">
+        <div class="twoday_height today_weather col-6">-</div>
+        <div class="twoday_height col-6">
+            <img class="today_icon" src="./pics/99.png">
+        </div>
+      </div>
+    </div>
+    <div class="tomorrow">
+      <div class="clearfix col-12">
+        <div class="twoday_height col-6">明天</div>
+        <div class="twoday_height tomorrow_temphl col-6">-/-</div>
+      </div>
+      <div class="clearfix col-12">
+        <div class="twoday_height tomorrow_weather col-6">-</div>
+        <div class="twoday_height col-6">
+            <img class="tomorrow_icon col-6" src="./pics/99.png">
+        </div>        
+      </div>
+    </div>
+  </div>
+
+  <div class="hours">
+    <div class="hours_title">24小时预报</div>
+    <div class="hours_block">
+      <div class="hour">
+        <img class="hour_icon" src="./pics/99.png">
+        <div class="hour_temp">-</div>
+        <div class="hour_weather">-</div>
+        <div class="hour_time">-</div>
+      </div>
+      <div class="hour">
+        <img class="hour_icon" src="./pics/99.png">
+        <div class="hour_temp">-</div>
+        <div class="hour_weather">-</div>
+        <div class="hour_time">-</div>
+      </div>
+      <div class="hour">
+        <img class="hour_icon" src="./pics/99.png">
+        <div class="hour_temp">-</div>
+        <div class="hour_weather">-</div>
+        <div class="hour_time">-</div>
+      </div>
+        <div class="hour">
+        <img class="hour_icon" src="./pics/99.png">
+        <div class="hour_temp">-</div>
+        <div class="hour_weather">-</div>
+        <div class="hour_time">-</div>
+      </div>
+      <div class="hour">
+        <img class="hour_icon" src="./pics/99.png">
+        <div class="hour_temp">-</div>
+        <div class="hour_weather">-</div>
+        <div class="hour_time">-</div>
+      </div>
+      <div class="hour">
+        <img class="hour_icon" src="./pics/99.png">
+        <div class="hour_temp">-</div>
+        <div class="hour_weather">-</div>
+        <div class="hour_time">-</div>
+      </div>
+      <div class="hour">
+        <img class="hour_icon" src="./pics/99.png">
+        <div class="hour_temp">-</div>
+        <div class="hour_weather">-</div>
+        <div class="hour_time">-</div>
+      </div>
+      <div class="hour">
+        <img class="hour_icon" src="./pics/99.png">
+        <div class="hour_temp">-</div>
+        <div class="hour_weather">-</div>
+        <div class="hour_time">-</div>
+      </div>
+      <div class="hour">
+        <img class="hour_icon" src="./pics/99.png">
+        <div class="hour_temp">-</div>
+        <div class="hour_weather">-</div>
+        <div class="hour_time">-</div>
+      </div>
+        <div class="hour">
+        <img class="hour_icon" src="./pics/99.png">
+        <div class="hour_temp">-</div>
+        <div class="hour_weather">-</div>
+        <div class="hour_time">-</div>
+      </div>
+      <div class="hour">
+        <img class="hour_icon" src="./pics/99.png">
+        <div class="hour_temp">-</div>
+        <div class="hour_weather">-</div>
+        <div class="hour_time">-</div>
+      </div>
+      <div class="hour">
+        <img class="hour_icon" src="./pics/99.png">
+        <div class="hour_temp">-</div>
+        <div class="hour_weather">-</div>
+        <div class="hour_time">-</div>
+      </div>
+      <div class="hour">
+        <img class="hour_icon" src="./pics/99.png">
+        <div class="hour_temp">-</div>
+        <div class="hour_weather">-</div>
+        <div class="hour_time">-</div>
+      </div>
+      <div class="hour">
+        <img class="hour_icon" src="./pics/99.png">
+        <div class="hour_temp">-</div>
+        <div class="hour_weather">-</div>
+        <div class="hour_time">-</div>
+      </div>
+      <div class="hour">
+        <img class="hour_icon" src="./pics/99.png">
+        <div class="hour_temp">-</div>
+        <div class="hour_weather">-</div>
+        <div class="hour_time">-</div>
+      </div>
+        <div class="hour">
+        <img class="hour_icon" src="./pics/99.png">
+        <div class="hour_temp">-</div>
+        <div class="hour_weather">-</div>
+        <div class="hour_time">-</div>
+      </div>
+      <div class="hour">
+        <img class="hour_icon" src="./pics/99.png">
+        <div class="hour_temp">-</div>
+        <div class="hour_weather">-</div>
+        <div class="hour_time">-</div>
+      </div>
+      <div class="hour">
+        <img class="hour_icon" src="./pics/99.png">
+        <div class="hour_temp">-</div>
+        <div class="hour_weather">-</div>
+        <div class="hour_time">-</div>
+      </div>
+      <div class="hour">
+        <img class="hour_icon" src="./pics/99.png">
+        <div class="hour_temp">-</div>
+        <div class="hour_weather">-</div>
+        <div class="hour_time">-</div>
+      </div>
+      <div class="hour">
+        <img class="hour_icon" src="./pics/99.png">
+        <div class="hour_temp">-</div>
+        <div class="hour_weather">-</div>
+        <div class="hour_time">-</div>
+      </div>
+      <div class="hour">
+        <img class="hour_icon" src="./pics/99.png">
+        <div class="hour_temp">-</div>
+        <div class="hour_weather">-</div>
+        <div class="hour_time">-</div>
+      </div>
+        <div class="hour">
+        <img class="hour_icon" src="./pics/99.png">
+        <div class="hour_temp">-</div>
+        <div class="hour_weather">-</div>
+        <div class="hour_time">-</div>
+      </div>
+      <div class="hour">
+        <img class="hour_icon" src="./pics/99.png">
+        <div class="hour_temp">-</div>
+        <div class="hour_weather">-</div>
+        <div class="hour_time">-</div>
+      </div>
+      <div class="hour">
+        <img class="hour_icon" src="./pics/99.png">
+        <div class="hour_temp">-</div>
+        <div class="hour_weather">-</div>
+        <div class="hour_time">-</div>
+      </div>
+    </div>
+
+  </div>
+  <ul id="example-1">
+    <li v-for="item in items">
+      {{ item.message }}
+    </li>
+  </ul>
+  <div class="part  weeks">
+    <p>一周天气预报</p>
+    <div class="week">
+      <div class="week_name">星期</div>
+      <div class="week_day_weather">--</div>
+      <img class="week_day_icon">
+      <div class="week_day_wind">-</div>
+      <div class="week_day_temphigh">-</div>
+      <div class="week_night_templow">-</div>
+      <div class="week_night_wind">-</div>
+      <img class="week_night_icon">
+      <div class="week_night_weather">-</div>
+    </div>
+    <div class="week">
+      <div class="week_name">星期</div>
+      <div class="week_day_weather">--</div>
+      <img class="week_day_icon">
+      <div class="week_day_wind">-</div>
+      <div class="week_day_temphigh">-</div>
+      <div class="week_night_templow">-</div>
+      <div class="week_night_wind">-</div>
+      <img class="week_night_icon">
+      <div class="week_night_weather">-</div>
+    </div>
+    <div class="week">
+      <div class="week_name">星期</div>
+      <div class="week_day_weather">--</div>
+      <img class="week_day_icon">
+      <div class="week_day_wind">-</div>
+      <div class="week_day_temphigh">-</div>
+      <div class="week_night_templow">-</div>
+      <div class="week_night_wind">-</div>
+      <img class="week_night_icon">
+      <div class="week_night_weather">-</div>
+    </div>    
+    <div class="week">
+      <div class="week_name">星期</div>
+      <div class="week_day_weather">--</div>
+      <img class="week_day_icon">
+      <div class="week_day_wind">-</div>
+      <div class="week_day_temphigh">-</div>
+      <div class="week_night_templow">-</div>
+      <div class="week_night_wind">-</div>
+      <img class="week_night_icon">
+      <div class="week_night_weather">-</div>
+    </div>
+    <div class="week">
+      <div class="week_name">星期</div>
+      <div class="week_day_weather">--</div>
+      <img class="week_day_icon">
+      <div class="week_day_wind">-</div>
+      <div class="week_day_temphigh">-</div>
+      <div class="week_night_templow">-</div>
+      <div class="week_night_wind">-</div>
+      <img class="week_night_icon">
+      <div class="week_night_weather">-</div>
+    </div>
+    <div class="week">
+        <div class="week_name">星期</div>
+        <div class="week_day_weather">--</div>
+        <img class="week_day_icon">
+        <div class="week_day_wind">-</div>
+        <div class="week_day_temphigh">-</div>
+        <div class="week_night_templow">-</div>
+        <div class="week_night_wind">-</div>
+        <img class="week_night_icon">
+        <div class="week_night_weather">-</div>
+    </div>    
+    <div class="week">
+      <div class="week_name">星期</div>
+      <div class="week_day_weather">--</div>
+      <img class="week_day_icon">
+      <div class="week_day_wind">-</div>
+      <div class="week_day_temphigh">-</div>
+      <div class="week_night_templow">-</div>
+      <div class="week_night_wind">-</div>
+      <img class="week_night_icon">
+      <div class="week_night_weather">-</div>
+    </div> 
+  </div>
+  <div class="indexs">
+    <div class="index_title">生活指数</div>
+    <div class="index_block">
+      <div class="index_name ">空调<br/>指数</div>
+      <div class="index_text ">----</div>
+    </div>
+    <div class="index_block">
+      <div class="index_name ">运动<br/>指数</div>
+      <div class="index_text ">----</div>
+    </div>
+    <div class="index_block">
+      <div class="index_name ">防紫<br/>外线</div>
+      <div class="index_text ">----</div>
+    </div>
+    <div class="index_block">
+      <div class="index_name ">感冒<br/>指数</div>
+      <div class="index_text ">----</div>
+    </div>
+    <div class="index_block">
+      <div class="index_name ">洗车<br/>指数</div>
+      <div class="index_text ">----</div>
+    </div>
+    <div class="index_block">
+      <div class="index_name ">污染<br/>扩散</div>
+      <div class="index_text ">----</div>
+    </div>
+    <div class="index_block">
+      <div class="index_name ">穿衣<br/>指数</div>
+      <div class="index_text ">----</div>
+    </div>
+  </div>
+
+  <p class="editor">By: yemaoteng</p>
+
+  <div class="part debug">
+    <button class="btn-update" onclick="displayWeather(shanghai)">缓存上海</button>
+    <button class="btn-update" onclick="displayWeather(anshun)">fetch安顺</button>
+
+    <p id="lat">lat</p>
+    <p id="lon">lon</p>
+  </div>
+
+</div>
+
+
+<script src="./qweather.js"></script>
+<script src="./jquery-3.3.1.js"></script>
+<script src="./vue.js"></script>
+</body>
+</html>
