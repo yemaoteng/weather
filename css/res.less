@@ -1,2 +1,57 @@
 @import "reset.less";
+.col(@index, @num, @s) when(@index > 0){
+    .col(@index - 1, @num, @s);
+    .col-@{s}-@{index}{
+        float: left;
+        width: 100% / @num * @index;
+
+    }
+}
+.col(12,12,sm);
+
+* {
+    box-sizing: border-box;
+}
+div {
+    border: 2px solid lavender;
+    font-size: 30px;
+}
+
+.contain-fluid {
+    width: 100%;
+}
+.row::after {
+    content: '';
+    display: block;
+    clear: both;
+}
+.nav {
+    height: 100px;
+}
+.today {
+    height: 200px;
+
+}
+.tomorrow {
+    height: 200px;
+}
+.week {
+    height: 300px;
+}
+.hours {
+    height: 300px;
+}
+.life {
+    height: 400px;
+}
+
+/******************************md******************************/
+@media all and (min-width: 960px) {
+    .col(12,12,md);
+}
+
+/******************************md******************************/
+@media all and (min-width: 1080px) {
+    .col(24,24,lg);
+}
 
