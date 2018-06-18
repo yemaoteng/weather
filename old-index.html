@@ -4,7 +4,8 @@
   <meta charset="utf-8"/>
   <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=0.5, maximum-scale=2.0, user-scalable=yes" />
   <link rel="shortcut icon" href="./weather.png">
-  <link type="text/css" rel="stylesheet" href="css/sty.css"> 
+  <link type="text/css" rel="stylesheet" href="css/sty.css">   
+  <script src="./js/vue.js"></script>   
 </head>
 <body>
 
@@ -14,6 +15,8 @@
       <div class="dark"></div>
       <div class="head city">定位中------</div>
   </div>
+
+
 
   <div class="main">
     <div class="clearfix">
@@ -29,6 +32,23 @@
       <img class="main_icon" src="./pics/99.png" />
     </div>
     <button class="btn-update" onclick="upup()">更新</button>
+    <div id="vapp">
+      <div>Hello Here</div>
+      <p>{{vcshanghai.msg}}</p>
+      <p>{{vcshanghai.result.city}}</p>
+      <ul>
+          <li v-for="(hour, index) in vcshanghai.result.hourly">
+              <span>{{ hour.time }}</span>
+              <span>{{ hour.weather }}</span>
+              <span>{{ hour.temp }}</span>
+              <span>{{ hour.img }}</span>
+          </li>
+      </ul>
+      <button @click="lo">swith</button>
+      <button @click="sw">swith</button>
+
+    </div>
+   
   </div>
 
   <div class="twoday clearfix">
@@ -340,6 +360,5 @@
 
 <script src="./js/qweather.js"></script>
 <script src="./js/jquery-3.3.1.js"></script>
-<script src="./js/vue.js"></script>
 </body>
 </html>
