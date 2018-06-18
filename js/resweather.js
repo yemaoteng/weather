@@ -158,7 +158,7 @@ function outsidechange() {
 }
 
 
-
+//获取当前地理位置并更新数据的两个方法在这里
 function upup() {
   if (navigator.geolocation) {
     console.log("navigator.geolocation>Enable!29333");
