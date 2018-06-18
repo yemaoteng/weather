@@ -127,69 +127,104 @@ var vvvapp = new Vue({
   data: {
     vnow:{//尚未定位成功应该显示这里的空信息
       "city":"城市",
-      "cityid":"24","citycode":"101020100",
-      "date":"2018-06-01","week":"星期五","weather":"晴",
-      "temp":"26","temphigh":"26","templow":"19","img":"0","humidity":"37",
-      "pressure":"1015","windspeed":"1.3","winddirect":"静风",
-      "windpower":"0级","updatetime":"2018-06-01 13:59:00",
+      "cityid":"24",
+      "citycode":"101020100",
+      "date":"2018-06-01",
+      "week":"星期五",
+      "weather":"晴",
+      "temp":"26",
+      "temphigh":"26",
+      "templow":"19",
+      "img":"0",
+      "humidity":"37",
+      "pressure":"1015",
+      "windspeed":"1.3",
+      "winddirect":"静风",
+      "windpower":"0级",
+      "updatetime":"2018-06-01 13:59:00",
       "index":[
-        {"iname":"空调指数","ivalue":"较少开启","detail":"您将感到很舒适，一般不需要开启空调。"},
-        {"iname":"运动指数","ivalue":"较适宜","detail":"天气较好，但风力较大，推荐您进行室内运动，若在户外运动请注意防风。"},
-        {"iname":"紫外线指数","ivalue":"强","detail":"紫外线辐射强，建议涂擦SPF20左右、PA++的防晒护肤品。避免在10点至14点暴露于日光下。"},
-        {"iname":"感冒指数","ivalue":"少发","detail":"各项气象条件适宜，无明显降温过程，发生感冒机率较低。"},
-        {"iname":"洗车指数","ivalue":"较适宜","detail":"较适宜洗车，未来一天无雨，风力较小，擦洗一新的汽车至少能保持一天。"},
-        {"iname":"空气污染扩散指数","ivalue":"良","detail":"气象条件有利于空气污染物稀释、扩散和清除，可在室外正常活动。"},
-        {"iname":"穿衣指数","ivalue":"舒适","detail":"建议着长袖T恤、衬衫加单裤等服装。年老体弱者宜着针织长袖衬衫、马甲和长裤。"}
+        {"iname":"空调指数","ivalue":"---","detail":"---。"},
+        {"iname":"运动指数","ivalue":"---","detail":"---"},
+        {"iname":"紫外指数","ivalue":"---","detail":"---"},
+        {"iname":"感冒指数","ivalue":"---","detail":"---"},
+        {"iname":"洗车指数","ivalue":"---","detail":"---"},
+        {"iname":"污染扩散","ivalue":"---","detail":"---"},
+        {"iname":"穿衣指数","ivalue":"---","detail":"---"}
       ],
       "aqi":{
-        "so2":"6","so224":"7","no2":"32","no224":"31","co":"0.600","co24":"0.610","o3":"72","o38":"75","o324":"94","pm10":"33","pm1024":"34",
-        "pm2_5":"29","pm2_524":"36","iso2":"3","ino2":"16","ico":"6","io3":"23","io38":"38","ipm10":"31","ipm2_5":"42","aqi":"42",
-        "primarypollutant":"PM2.5","quality":"优","timepoint":"2018-05-19 21:00:00",
+        "so2":"---",
+        "so224":"---",
+        "no2":"---",
+        "no224":"---",
+        "co":"---",
+        "co24":"---",
+        "o3":"---",
+        "o38":"---",
+        "o324":"---",
+        "pm10":"---",
+        "pm1024":"---",
+        "pm2_5":"---",
+        "pm2_524":"---",
+        "iso2":"---",
+        "ino2":"---",
+        "ico":"---",
+        "io3":"---",
+        "io38":"---",
+        "ipm10":"---",
+        "ipm2_5":"---",
+        "aqi":"---",
+        "primarypollutant":"---",
+        "quality":"---",
+        "timepoint":"2018-05-19 21:00:00",
         "aqiinfo":{"level":"一级","color":"#00e400","affect":"空气质量令人满意，基本无空气污染","measure":"各类人群可正常活动"}
       },
       "daily":[
-        {"date":"2018-06-01","week":"星期五","sunrise":"04:51","sunset":"18:53","night":{"weather":"晴","templow":"19","img":"0","winddirect":"东北风","windpower":"3-5级"},"day":{"weather":"晴","temphigh":"26","img":"0","winddirect":"东北风","windpower":"3-5级"}},
-        {"date":"2018-06-02","week":"星期六","sunrise":"04:51","sunset":"18:53","night":{"weather":"多云","templow":"19","img":"1","winddirect":"东南风","windpower":"3-5级"},"day":{"weather":"多云","temphigh":"27","img":"1","winddirect":"东风","windpower":"3-5级"}},
-        {"date":"2018-06-03","week":"星期日","sunrise":"04:51","sunset":"18:54","night":{"weather":"多云","templow":"21","img":"1","winddirect":"东南风","windpower":"3-5级"},"day":{"weather":"多云","temphigh":"27","img":"1","winddirect":"东南风","windpower":"3-5级"}},
-        {"date":"2018-06-04","week":"星期一","sunrise":"04:50","sunset":"18:54","night":{"weather":"中雨","templow":"21","img":"8","winddirect":"东北风","windpower":"微风"},"day":{"weather":"小雨","temphigh":"28","img":"7","winddirect":"东南风","windpower":"微风"}},
-        {"date":"2018-06-05","week":"星期二","sunrise":"04:50","sunset":"18:55","night":{"weather":"阴","templow":"21","img":"2","winddirect":"东北风","windpower":"微风"},"day":{"weather":"中雨","temphigh":"26","img":"8","winddirect":"东北风","windpower":"微风"}},
-        {"date":"2018-06-06","week":"星期三","sunrise":"04:50","sunset":"18:55","night":{"weather":"多云","templow":"22","img":"1","winddirect":"东北风","windpower":"微风"},"day":{"weather":"小雨","temphigh":"26","img":"7","winddirect":"东风","windpower":"微风"}},
-        {"date":"2018-06-07","week":"星期四","sunrise":"04:50","sunset":"18:56","night":{"weather":"阴","templow":"20","img":"2","winddirect":"持续无风向","windpower":"微风"},"day":{"weather":"小雨","temphigh":"25","img":"7","winddirect":"东风","windpower":"微风"}}
+        {"date":"2018-06-01","week":"---","sunrise":"00:00","sunset":"00:00","night":{"weather":"---","templow":"---","img":"0","winddirect":"---","windpower":"---"},"day":{"weather":"---","temphigh":"---","img":"0","winddirect":"---","windpower":"---"}},
+        {"date":"2018-06-01","week":"---","sunrise":"00:00","sunset":"00:00","night":{"weather":"---","templow":"---","img":"0","winddirect":"---","windpower":"---"},"day":{"weather":"---","temphigh":"---","img":"0","winddirect":"---","windpower":"---"}},
+        {"date":"2018-06-01","week":"---","sunrise":"00:00","sunset":"00:00","night":{"weather":"---","templow":"---","img":"0","winddirect":"---","windpower":"---"},"day":{"weather":"---","temphigh":"---","img":"0","winddirect":"---","windpower":"---"}},
+        {"date":"2018-06-01","week":"---","sunrise":"00:00","sunset":"00:00","night":{"weather":"---","templow":"---","img":"0","winddirect":"---","windpower":"---"},"day":{"weather":"---","temphigh":"---","img":"0","winddirect":"---","windpower":"---"}},
+        {"date":"2018-06-01","week":"---","sunrise":"00:00","sunset":"00:00","night":{"weather":"---","templow":"---","img":"0","winddirect":"---","windpower":"---"},"day":{"weather":"---","temphigh":"---","img":"0","winddirect":"---","windpower":"---"}},
+        {"date":"2018-06-01","week":"---","sunrise":"00:00","sunset":"00:00","night":{"weather":"---","templow":"---","img":"0","winddirect":"---","windpower":"---"},"day":{"weather":"---","temphigh":"---","img":"0","winddirect":"---","windpower":"---"}},
+        {"date":"2018-06-01","week":"---","sunrise":"00:00","sunset":"00:00","night":{"weather":"---","templow":"---","img":"0","winddirect":"---","windpower":"---"},"day":{"weather":"---","temphigh":"---","img":"0","winddirect":"---","windpower":"---"}}
       ],
       "hourly":[
-                {"time":"13:00","weather":"晴","temp":"27","img":"0"},
-                {"time":"14:00","weather":"晴","temp":"27","img":"0"},
-                {"time":"15:00","weather":"晴","temp":"26","img":"0"},
-                {"time":"16:00","weather":"晴","temp":"26","img":"0"},
-                {"time":"17:00","weather":"晴","temp":"25","img":"0"},
-                {"time":"18:00","weather":"晴","temp":"24","img":"0"},
-                {"time":"19:00","weather":"晴","temp":"22","img":"0"},
-                {"time":"20:00","weather":"晴","temp":"21","img":"0"},
-                {"time":"21:00","weather":"多云","temp":"21","img":"1"},
-                {"time":"22:00","weather":"多云","temp":"20","img":"1"},
-                {"time":"23:00","weather":"多云","temp":"20","img":"1"},
-                {"time":"0:00","weather":"多云","temp":"20","img":"1"},
-                {"time":"1:00","weather":"多云","temp":"20","img":"1"},
-                {"time":"2:00","weather":"多云","temp":"20","img":"1"},
-                {"time":"3:00","weather":"多云","temp":"19","img":"1"},
-                {"time":"4:00","weather":"多云","temp":"19","img":"1"},
-                {"time":"5:00","weather":"多云","temp":"20","img":"1"},
-                {"time":"6:00","weather":"多云","temp":"20","img":"1"},
-                {"time":"7:00","weather":"多云","temp":"22","img":"1"},
-                {"time":"8:00","weather":"多云","temp":"23","img":"1"},
-                {"time":"9:00","weather":"多云","temp":"25","img":"1"},
-                {"time":"10:00","weather":"多云","temp":"26","img":"1"},
-                {"time":"11:00","weather":"多云","temp":"27","img":"1"},
-                {"time":"12:00","weather":"多云","temp":"27","img":"1"}
-              ]
-      }//vnow的花括号    
+        {"time":"00:00","weather":"---","temp":"---","img":"0"},
+        {"time":"00:00","weather":"---","temp":"---","img":"0"},
+        {"time":"00:00","weather":"---","temp":"---","img":"0"},
+        {"time":"00:00","weather":"---","temp":"---","img":"0"},
+        {"time":"00:00","weather":"---","temp":"---","img":"0"},
+        {"time":"00:00","weather":"---","temp":"---","img":"0"},
+        {"time":"00:00","weather":"---","temp":"---","img":"0"},
+        {"time":"00:00","weather":"---","temp":"---","img":"0"},
+        {"time":"00:00","weather":"---","temp":"---","img":"0"},
+        {"time":"00:00","weather":"---","temp":"---","img":"0"},
+        {"time":"00:00","weather":"---","temp":"---","img":"0"},
+        {"time":"00:00","weather":"---","temp":"---","img":"0"},
+        {"time":"00:00","weather":"---","temp":"---","img":"0"},
+        {"time":"00:00","weather":"---","temp":"---","img":"0"},
+        {"time":"00:00","weather":"---","temp":"---","img":"0"},
+        {"time":"00:00","weather":"---","temp":"---","img":"0"},
+        {"time":"00:00","weather":"---","temp":"---","img":"0"},
+        {"time":"00:00","weather":"---","temp":"---","img":"0"},
+        {"time":"00:00","weather":"---","temp":"---","img":"0"},
+        {"time":"00:00","weather":"---","temp":"---","img":"0"},
+        {"time":"00:00","weather":"---","temp":"---","img":"0"},
+        {"time":"00:00","weather":"---","temp":"---","img":"0"},
+        {"time":"00:00","weather":"---","temp":"---","img":"0"},
+        {"time":"00:00","weather":"---","temp":"---","img":"0"}
+      ]
+    },//vnow的花括号    
+    citylist:[
+      {cityname:"广州"},
+      {cityname:"深圳"},
+    ]
   },//这个是data的花括号
   methods:{
     loadshanghai:function(){
-      this.vnow = shanghai;
+      this.vnow = shanghai.result;
     },
     loadanshun:function(){
-      this.vnow = anshun;
+      this.vnow = anshun.result;
     },
     vupup:function(){
       if (navigator.geolocation) {
@@ -199,7 +234,6 @@ var vvvapp = new Vue({
       }else{
         console.log("can not get navigator.geolocation");
       }
-      console.log("upup() end");
     }
   },
   computed: {
@@ -246,7 +280,13 @@ function qqweather(position) {
   })
   .then(function (data){
     console.log(data);
-    vvvapp.vnow = data;  
+    if(data.msg=='ok'){
+      vvvapp.vnow = data.result;  
+    }else{
+      console.log(data.msg);
+      console.log('返回天气错误，请稍后再试');
+    }
+    
   })
   .catch(function (err) {
     console.error(err);
