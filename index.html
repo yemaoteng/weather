@@ -11,11 +11,9 @@
 <body>
     
 
-    
-<button onclick="outsidechange()">switch outside</button>
-
 
 <div id="vapp" class="row">
+    
     <div class="tem col-sm-12 col-md-12 col-lg-24">
         <!--这里临时插入测试代码-->
         <div class="row">
@@ -28,14 +26,60 @@
         </div>
     </div>
      <!--上面能出数据，就往下面粘贴-->
-    <div class="nav col-sm-12 col-md-2 col-lg-6">nav</div>
+
+     <!--导航-->
+    <div class="nav col-sm-12 col-md-2 col-lg-6">
+        <div v-for="city in citylist" :key="city.id">
+            {{ city.name }}
+        </div>
+    </div>
     <div class="main col-sm-12 col-md-10 col-lg-18">
         <div class="row">
-            <div class="today col-sm-12 col-md-6"></div>
-            <div class="tomorrow col-sm-12 col-md-6">tomorrow</div>
-            <div class="week col-sm-12">week</div>
-            <div class="hours col-sm-12">hours</div>
-            <div class="life col-sm-12">life</div>
+            <!--今天天气-->
+            <div class="today col-sm-12 col-md-6">
+                <div class="icon"></div>
+                <p><span>今天 · {{ vnow.week }}</span></p>
+                <p>{{ vnow.temp }}°C</p>
+                <h1>{{ vnow.weather }}</h1>
+            </div>
+
+            <!--明天天气-->
+            <div class="tomorrow col-sm-12 col-md-6">
+                <div class="icon"></div>
+                <p><span>明天 · {{ vnow.week }}</span></p>
+                <p>{{ vnow.temp }}°C</p>
+                <h1>{{ vnow.weather }}</h1>
+            </div>
+
+            <!--一周天气-->
+            <div class="weeks col-sm-12">
+                <div class="week" v-for="week in vnow.daily" :key="week.id">
+                    <div>{{ week.week }}</div>
+                    <div>{{ week.day.weather }}</div>
+                    <div>{{ week.day.img }}</div>
+                    <div>{{ week.day.windpower }}</div>
+                    <div>{{ week.day.temphigh }}</div>
+                    <div>{{ week.night.templow }}</div>
+                    <div>{{ week.night.windpower }}</div>
+                    <div>{{ week.night.img }}</div>
+                    <div>{{ week.night.weather }}</div>
+                </div>
+            </div>
+
+            <!--24小时预报-->
+            <div class="hours col-sm-12 row">
+                <div v-for="hour in vnow.hourly" :key="hour.id">
+                    <p>{{ hour.time }}-图片-{{ hour.img }}-{{hour.weather}}-{{hour.temp}}°C</p>
+                </div>
+            </div>
+
+            <!--生活指数-->
+            <div class="lifes col-sm-12 row">
+                <div class="life row" v-for="life in vnow.index" :key="life.id">
+                    <div class="lifename col-sm-3">{{life.iname}}</div>
+                    <div class="lifedetail col-sm-9">{{life.ivalue}}</div>
+                </div>
+            </div>
         </div>
     </div>
 </div>

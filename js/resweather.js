@@ -125,7 +125,96 @@ console.log(outside);
 var vvvapp = new Vue({
   el:'#vapp',
   data: {
-    vnow:{//尚未定位成功应该显示这里的空信息
+    empty_weather:{//尚未定位成功应该显示这里的空信息
+      "city":"城市",
+      "cityid":"24",
+      "citycode":"101020100",
+      "date":"2018-06-01",
+      "week":"星期五",
+      "weather":"晴",
+      "temp":"26",
+      "temphigh":"26",
+      "templow":"19",
+      "img":"0",
+      "humidity":"37",
+      "pressure":"1015",
+      "windspeed":"1.3",
+      "winddirect":"静风",
+      "windpower":"0级",
+      "updatetime":"2018-06-01 13:59:00",
+      "index":[
+        {"iname":"空调指数","ivalue":"---","detail":"---。"},
+        {"iname":"运动指数","ivalue":"---","detail":"---"},
+        {"iname":"紫外指数","ivalue":"---","detail":"---"},
+        {"iname":"感冒指数","ivalue":"---","detail":"---"},
+        {"iname":"洗车指数","ivalue":"---","detail":"---"},
+        {"iname":"污染扩散","ivalue":"---","detail":"---"},
+        {"iname":"穿衣指数","ivalue":"---","detail":"---"}
+      ],
+      "aqi":{
+        "so2":"---",
+        "so224":"---",
+        "no2":"---",
+        "no224":"---",
+        "co":"---",
+        "co24":"---",
+        "o3":"---",
+        "o38":"---",
+        "o324":"---",
+        "pm10":"---",
+        "pm1024":"---",
+        "pm2_5":"---",
+        "pm2_524":"---",
+        "iso2":"---",
+        "ino2":"---",
+        "ico":"---",
+        "io3":"---",
+        "io38":"---",
+        "ipm10":"---",
+        "ipm2_5":"---",
+        "aqi":"---",
+        "primarypollutant":"---",
+        "quality":"---",
+        "timepoint":"2018-05-19 21:00:00",
+        "aqiinfo":{"level":"一级","color":"#00e400","affect":"空气质量令人满意，基本无空气污染","measure":"各类人群可正常活动"}
+      },
+      "daily":[
+        {"date":"2018-06-01","week":"---","sunrise":"00:00","sunset":"00:00","night":{"weather":"---","templow":"---","img":"0","winddirect":"---","windpower":"---"},"day":{"weather":"---","temphigh":"---","img":"0","winddirect":"---","windpower":"---"}},
+        {"date":"2018-06-01","week":"---","sunrise":"00:00","sunset":"00:00","night":{"weather":"---","templow":"---","img":"0","winddirect":"---","windpower":"---"},"day":{"weather":"---","temphigh":"---","img":"0","winddirect":"---","windpower":"---"}},
+        {"date":"2018-06-01","week":"---","sunrise":"00:00","sunset":"00:00","night":{"weather":"---","templow":"---","img":"0","winddirect":"---","windpower":"---"},"day":{"weather":"---","temphigh":"---","img":"0","winddirect":"---","windpower":"---"}},
+        {"date":"2018-06-01","week":"---","sunrise":"00:00","sunset":"00:00","night":{"weather":"---","templow":"---","img":"0","winddirect":"---","windpower":"---"},"day":{"weather":"---","temphigh":"---","img":"0","winddirect":"---","windpower":"---"}},
+        {"date":"2018-06-01","week":"---","sunrise":"00:00","sunset":"00:00","night":{"weather":"---","templow":"---","img":"0","winddirect":"---","windpower":"---"},"day":{"weather":"---","temphigh":"---","img":"0","winddirect":"---","windpower":"---"}},
+        {"date":"2018-06-01","week":"---","sunrise":"00:00","sunset":"00:00","night":{"weather":"---","templow":"---","img":"0","winddirect":"---","windpower":"---"},"day":{"weather":"---","temphigh":"---","img":"0","winddirect":"---","windpower":"---"}},
+        {"date":"2018-06-01","week":"---","sunrise":"00:00","sunset":"00:00","night":{"weather":"---","templow":"---","img":"0","winddirect":"---","windpower":"---"},"day":{"weather":"---","temphigh":"---","img":"0","winddirect":"---","windpower":"---"}}
+      ],
+      "hourly":[
+        {"time":"00:00","weather":"---","temp":"---","img":"0"},
+        {"time":"00:00","weather":"---","temp":"---","img":"0"},
+        {"time":"00:00","weather":"---","temp":"---","img":"0"},
+        {"time":"00:00","weather":"---","temp":"---","img":"0"},
+        {"time":"00:00","weather":"---","temp":"---","img":"0"},
+        {"time":"00:00","weather":"---","temp":"---","img":"0"},
+        {"time":"00:00","weather":"---","temp":"---","img":"0"},
+        {"time":"00:00","weather":"---","temp":"---","img":"0"},
+        {"time":"00:00","weather":"---","temp":"---","img":"0"},
+        {"time":"00:00","weather":"---","temp":"---","img":"0"},
+        {"time":"00:00","weather":"---","temp":"---","img":"0"},
+        {"time":"00:00","weather":"---","temp":"---","img":"0"},
+        {"time":"00:00","weather":"---","temp":"---","img":"0"},
+        {"time":"00:00","weather":"---","temp":"---","img":"0"},
+        {"time":"00:00","weather":"---","temp":"---","img":"0"},
+        {"time":"00:00","weather":"---","temp":"---","img":"0"},
+        {"time":"00:00","weather":"---","temp":"---","img":"0"},
+        {"time":"00:00","weather":"---","temp":"---","img":"0"},
+        {"time":"00:00","weather":"---","temp":"---","img":"0"},
+        {"time":"00:00","weather":"---","temp":"---","img":"0"},
+        {"time":"00:00","weather":"---","temp":"---","img":"0"},
+        {"time":"00:00","weather":"---","temp":"---","img":"0"},
+        {"time":"00:00","weather":"---","temp":"---","img":"0"},
+        {"time":"00:00","weather":"---","temp":"---","img":"0"}
+      ]
+    },
+    vnow:{//屏幕上显示的是这里的天气。选择哪个城市，就用哪个城市的天气来覆盖这里的信息
       "city":"城市",
       "cityid":"24",
       "citycode":"101020100",
@@ -215,8 +304,9 @@ var vvvapp = new Vue({
       ]
     },//vnow的花括号    
     citylist:[
-      {cityname:"广州"},
-      {cityname:"深圳"},
+      {name:'广州',weather:this.empty_weather},
+      {name:'深圳',weather:this.empty_weather},
+      {name:'定位',weather:this.empty_weather}
     ]
   },//这个是data的花括号
   methods:{

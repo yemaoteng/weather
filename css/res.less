@@ -13,8 +13,7 @@
     box-sizing: border-box;
 }
 div {
-    border: 2px solid lavender;
-    font-size: 30px;
+    border: 1px solid lavender;
 }
 
 .contain-fluid {
@@ -26,22 +25,52 @@ div {
     clear: both;
 }
 .nav {
-    height: 100px;
+    div{
+        width:100%;
+        line-height: 60px;
+        text-align: center;
+        font-size: 26px;
+    }
 }
-.today {
-    height: 700px;
+.today,.tomorrow {
+    .icon {
+        width: 300px;
+        height: 300px;
+        margin:0 auto;
+    }
+    span{
+        color:#aaa;
+        font-size: 16px;
+    }
+    p {
+        text-align: center;
+        font-size: 24px;
+    }
+    h1 {
+        text-align: center;
+        font-size: 32px;
+    }
 }
 .tomorrow {
-    height: 700px;
+    background:#eee;
 }
-.week {
-    height: 300px;
+.weeks{
+    background-color: #aaa;
+    white-space: nowrap;
+    overflow-x: scroll;
+    overflow-y: hidden;
+    .week {
+        display: inline-block;
+        text-align: center;
+        width: 50px;
+    }
 }
+
 .hours {
-    height: 300px;
+    background-color: lightgoldenrodyellow;
 }
 .life {
-    height: 400px;
+    background:lavender;
 }
 
 /******************************md******************************/
