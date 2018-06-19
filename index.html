@@ -17,7 +17,6 @@
     <div class="tem col-sm-12 col-md-12 col-lg-24">
         <!--这里临时插入测试代码-->
         <div class="row">
-            <div>Hello Here</div>
             <p>{{vnowweather.city}}</p>
         
             <button @click="loadshanghai">假装我在上海</button>
@@ -29,8 +28,20 @@
 
      <!--导航-->
     <div class="nav col-sm-12 col-md-2 col-lg-6">
-        <div v-for="city in citylist" :key="city.id">
-            {{ city.name }}
+        <div class="sm-nav c">
+            <span>{{ vnow.city }}</span>
+            <div class="dropdown">
+                <div class="dropdown-button" @click="displayDDcontent"></div>
+                <div class="dropdown-content" v-show="isShowDD">
+                    <div class="city" v-for="city in citylist" :key="city.id">
+                        {{ city.name }}                       
+                    </div>     
+                </div> 
+            </div>
+            
+        </div>
+        <div class="md-nav" v-for="city in citylist" :key="city.id">
+            <div class="cityblock">{{ city.name }}</div>
         </div>
     </div>
     <div class="main col-sm-12 col-md-10 col-lg-18">
@@ -83,8 +94,6 @@
         </div>
     </div>
 </div>
-
-
 
 <script src="./js/resweather.js"></script>
 </body>

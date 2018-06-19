@@ -27,9 +27,36 @@ div {
 .nav {
     div{
         width:100%;
-        line-height: 60px;
         text-align: center;
-        font-size: 26px;
+    }
+    .sm-nav {
+        display: block;
+        position: relative;
+        span{
+            display: block;
+            line-height: 30px;
+        }
+        .dropdown{
+            position: absolute;
+            left: 0;            
+            top:0;
+            .dropdown-button{
+                width:30px;
+                height: 30px;
+                border:1px solid red;
+            }
+            .dropdown-content{
+                .city{
+                    border:1px solid blue;
+                    width:25%;
+                    line-height: 40px;
+                }
+            }
+        }
+        
+    }
+    .md-nav{
+        display: none;
     }
 }
 .today,.tomorrow {
@@ -76,6 +103,17 @@ div {
 /******************************md******************************/
 @media all and (min-width: 960px) {
     .col(12,12,md);
+    .nav{
+        .sm-nav{
+            display:none;
+        }
+        .md-nav{
+            display: block;
+            .cityblock{
+                height: 50px;
+            }
+        }
+    }
 }
 
 /******************************md******************************/

@@ -65,9 +65,33 @@ div {
 }
 .nav div {
   width: 100%;
-  line-height: 60px;
   text-align: center;
-  font-size: 26px;
+}
+.nav .sm-nav {
+  display: block;
+  position: relative;
+}
+.nav .sm-nav span {
+  display: block;
+  line-height: 30px;
+}
+.nav .sm-nav .dropdown {
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+.nav .sm-nav .dropdown .dropdown-button {
+  width: 30px;
+  height: 30px;
+  border: 1px solid red;
+}
+.nav .sm-nav .dropdown .dropdown-content .city {
+  border: 1px solid blue;
+  width: 25%;
+  line-height: 40px;
+}
+.nav .md-nav {
+  display: none;
 }
 .today .icon,
 .tomorrow .icon {
@@ -159,6 +183,15 @@ div {
   .col-md-12 {
     float: left;
     width: 100%;
+  }
+  .nav .sm-nav {
+    display: none;
+  }
+  .nav .md-nav {
+    display: block;
+  }
+  .nav .md-nav .cityblock {
+    height: 50px;
   }
 }
 /******************************md******************************/

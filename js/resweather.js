@@ -307,7 +307,8 @@ var vvvapp = new Vue({
       {name:'广州',weather:this.empty_weather},
       {name:'深圳',weather:this.empty_weather},
       {name:'定位',weather:this.empty_weather}
-    ]
+    ],
+    isShowDD:false
   },//这个是data的花括号
   methods:{
     loadshanghai:function(){
@@ -315,6 +316,9 @@ var vvvapp = new Vue({
     },
     loadanshun:function(){
       this.vnow = anshun.result;
+    },
+    displayDDcontent:function(){
+      this.isShowDD = !this.isShowDD;
     },
     vupup:function(){
       if (navigator.geolocation) {
