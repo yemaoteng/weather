@@ -1,4 +1,7 @@
-@import "reset.less";
+body {
+    margin: 0;
+}
+
 .col(@index, @num, @s) when(@index > 0){
     .col(@index - 1, @num, @s);
     .col-@{s}-@{index}{
@@ -99,25 +102,3 @@ div {
 .life {
     background:lavender;
 }
-
-/******************************md******************************/
-@media all and (min-width: 960px) {
-    .col(12,12,md);
-    .nav{
-        .sm-nav{
-            display:none;
-        }
-        .md-nav{
-            display: block;
-            .cityblock{
-                height: 50px;
-            }
-        }
-    }
-}
-
-/******************************md******************************/
-@media all and (min-width: 1080px) {
-    .col(24,24,lg);
-}
-

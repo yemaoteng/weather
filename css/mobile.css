@@ -1,0 +1,136 @@
+body {
+  margin: 0;
+}
+.col-sm-1 {
+  float: left;
+  width: 8.33333333%;
+}
+.col-sm-2 {
+  float: left;
+  width: 16.66666667%;
+}
+.col-sm-3 {
+  float: left;
+  width: 25%;
+}
+.col-sm-4 {
+  float: left;
+  width: 33.33333333%;
+}
+.col-sm-5 {
+  float: left;
+  width: 41.66666667%;
+}
+.col-sm-6 {
+  float: left;
+  width: 50%;
+}
+.col-sm-7 {
+  float: left;
+  width: 58.33333333%;
+}
+.col-sm-8 {
+  float: left;
+  width: 66.66666667%;
+}
+.col-sm-9 {
+  float: left;
+  width: 75%;
+}
+.col-sm-10 {
+  float: left;
+  width: 83.33333333%;
+}
+.col-sm-11 {
+  float: left;
+  width: 91.66666667%;
+}
+.col-sm-12 {
+  float: left;
+  width: 100%;
+}
+* {
+  box-sizing: border-box;
+}
+div {
+  border: 1px solid lavender;
+}
+.contain-fluid {
+  width: 100%;
+}
+.row::after {
+  content: '';
+  display: block;
+  clear: both;
+}
+.nav div {
+  width: 100%;
+  text-align: center;
+}
+.nav .sm-nav {
+  display: block;
+  position: relative;
+}
+.nav .sm-nav span {
+  display: block;
+  line-height: 30px;
+}
+.nav .sm-nav .dropdown {
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+.nav .sm-nav .dropdown .dropdown-button {
+  width: 30px;
+  height: 30px;
+  border: 1px solid red;
+}
+.nav .sm-nav .dropdown .dropdown-content .city {
+  border: 1px solid blue;
+  width: 25%;
+  line-height: 40px;
+}
+.nav .md-nav {
+  display: none;
+}
+.today .icon,
+.tomorrow .icon {
+  width: 300px;
+  height: 300px;
+  margin: 0 auto;
+}
+.today span,
+.tomorrow span {
+  color: #aaa;
+  font-size: 16px;
+}
+.today p,
+.tomorrow p {
+  text-align: center;
+  font-size: 24px;
+}
+.today h1,
+.tomorrow h1 {
+  text-align: center;
+  font-size: 32px;
+}
+.tomorrow {
+  background: #eee;
+}
+.weeks {
+  background-color: #aaa;
+  white-space: nowrap;
+  overflow-x: scroll;
+  overflow-y: hidden;
+}
+.weeks .week {
+  display: inline-block;
+  text-align: center;
+  width: 50px;
+}
+.hours {
+  background-color: lightgoldenrodyellow;
+}
+.life {
+  background: lavender;
+}

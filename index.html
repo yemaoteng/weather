@@ -5,7 +5,7 @@
     <title>Simple Weather</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=0.5, maximum-scale=2.0, user-scalable=yes" />
     <link rel="shortcut icon" href="./weather.png">
-    <link rel="stylesheet" type="text/css" media="screen" href="css/res.css" />
+    <link rel="stylesheet" type="text/css" media="screen" href="css/mobile.css" />
     <script src="js/vue.js"></script>
 </head>
 <body>
@@ -14,7 +14,7 @@
 
 <div id="vapp" class="row">
     
-    <div class="tem col-sm-12 col-md-12 col-lg-24">
+    <div class="tem">
         <!--这里临时插入测试代码-->
         <div class="row">
             <p>{{vnowweather.city}}</p>
@@ -27,7 +27,7 @@
      <!--上面能出数据，就往下面粘贴-->
 
      <!--导航-->
-    <div class="nav col-sm-12 col-md-2 col-lg-6">
+    <div class="nav">
         <div class="sm-nav c">
             <span>{{ vnow.city }}</span>
             <div class="dropdown">
@@ -44,10 +44,12 @@
             <div class="cityblock">{{ city.name }}</div>
         </div>
     </div>
-    <div class="main col-sm-12 col-md-10 col-lg-18">
+
+    <!--主要内容-->
+    <div class="main">
         <div class="row">
             <!--今天天气-->
-            <div class="today col-sm-12 col-md-6">
+            <div class="today">
                 <div class="icon"></div>
                 <p><span>今天 · {{ vnow.week }}</span></p>
                 <p>{{ vnow.temp }}°C</p>
@@ -55,7 +57,7 @@
             </div>
 
             <!--明天天气-->
-            <div class="tomorrow col-sm-12 col-md-6">
+            <div class="tomorrow">
                 <div class="icon"></div>
                 <p><span>明天 · {{ vnow.week }}</span></p>
                 <p>{{ vnow.temp }}°C</p>
@@ -63,7 +65,7 @@
             </div>
 
             <!--一周天气-->
-            <div class="weeks col-sm-12">
+            <div class="weeks">
                 <div class="week" v-for="week in vnow.daily" :key="week.id">
                     <div>{{ week.week }}</div>
                     <div>{{ week.day.weather }}</div>
@@ -78,23 +80,23 @@
             </div>
 
             <!--24小时预报-->
-            <div class="hours col-sm-12 row">
+            <div class="hours row">
                 <div v-for="hour in vnow.hourly" :key="hour.id">
                     <p>{{ hour.time }}-图片-{{ hour.img }}-{{hour.weather}}-{{hour.temp}}°C</p>
                 </div>
             </div>
 
             <!--生活指数-->
-            <div class="lifes col-sm-12 row">
+            <div class="lifes row">
                 <div class="life row" v-for="life in vnow.index" :key="life.id">
-                    <div class="lifename col-sm-3">{{life.iname}}</div>
-                    <div class="lifedetail col-sm-9">{{life.ivalue}}</div>
+                    <div class="lifename">{{life.iname}}</div>
+                    <div class="lifedetail">{{life.ivalue}}</div>
                 </div>
             </div>
         </div>
     </div>
 </div>
 
-<script src="./js/resweather.js"></script>
+<script src="./js/mobileweather.js"></script>
 </body>
 </html>
