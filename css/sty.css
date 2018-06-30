@@ -1,0 +1,281 @@
+/* 
+    现在使用的官方图标库，72*72，确实是比较小的。日后有空再换。
+
+
+
+ */
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    background-color:rgb(77, 156, 221);
+    color:white;
+    text-align: center;
+    padding-left: 0px;
+    padding-right: 0px;
+    padding-top: 20px;
+    margin:0;
+}
+
+/*
+div {
+    border:1px solid yellowgreen;
+}
+/*
+[class*="col-"] {
+    width: 100%;
+}
+@media only screen and (min-width: 200px) {}
+*/
+
+.col-1 {width: 8.33%;}
+.col-2 {width: 16.66%;}
+.col-3 {width: 25%;}
+.col-4 {width: 33.33%;}
+.col-5 {width: 41.66%;}
+.col-6 {width: 50%;}
+.col-7 {width: 58.33%;}
+.col-8 {width: 66.66%;}
+.col-9 {width: 75%;}
+.col-10 {width: 83.33%;}
+.col-11 {width: 91.66%;}
+.col-12 {width: 100%;}
+
+.clearfix::after {
+    content: "";
+    clear: both;
+    display: table;
+}
+
+
+.floatleft {
+    float: left;
+}
+
+#app {
+    max-width: 900px;
+    margin-left: auto;
+    margin-right: auto;
+    z-index: 0;
+}
+
+.part {
+    width: 100%;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    background-color: rgba(0,0,0,0.2);
+}
+.debug {
+    visibility: hidden;
+}
+
+/*********************************************头部*/
+.out_dark {
+    position: fixed;
+    top:0;
+    left:0;
+    width:100%;
+    height: 40px;
+    background-color: rgba(0,0,0,0.8);
+    z-index: -1;
+}
+.head {
+    position: fixed;
+    width: 100%;
+    max-width: 900px;
+    height: 40px;
+    left: auto;
+    top: 0;
+    overflow: hidden;
+    z-index: 0;
+}
+.dark {
+    position: fixed;
+    top:0;
+    left:0;
+    width:100%;
+    height: 40px;
+    background-color: rgba(15,31,44,1);
+    z-index: -1;
+}
+.city {
+    padding: 10px 10px;
+    text-align: left;
+    z-index: 2;
+}
+
+
+/**************************************************主要*/
+.main {
+    width: 100%;
+    margin-top:40px;
+}
+.main_temp {
+    float: left;
+    font-size: 50px;
+    padding: 6px 10px;
+}
+.main_weather {
+    float:left;
+    font-size: 20px;
+    padding: 10px 10px;
+}
+.main_winddirect {
+    padding: 2px 10px;
+}
+.main_windpower {
+    padding: 2px 10px;
+}
+.main_humidity {
+    padding: 2px 10px;
+}
+
+.main_icon {
+    width: 50%;
+    max-width: 250px;
+    margin-top: 60px;
+    margin-bottom: 70px;
+}
+
+
+.btn-update {
+    display: inline-block;
+    width:30%;
+    height:40px;
+    margin-left: auto;
+    margin-right:auto;
+    border:1px solid white;
+    background-color: transparent;
+    color:white;
+    font-size:20px;
+}
+.btn-update:hover {
+    border:1px solid transparent;
+    background-color:rgba(255,255,255,0.5);
+}
+
+/*********************************************两天*/
+.twoday {
+    margin-top: 10px;
+    margin-bottom: 10px;
+    background-color: rgba(0,0,0,0.2);
+}
+.twoday_height {
+    padding: 3px;
+}
+.twoday {
+    padding:3px;
+}
+
+.today {
+    width:50%;
+    float: left;
+    border-right: 1px solid white;
+}
+.today div {
+    float: left;
+}
+.today_icon {
+    height: 20px;
+    width: 20px;
+}
+.tomorrow_icon {
+    height: 20px;
+    width: 20px;
+}
+.tomorrow {
+    width:50%;
+    float: left;
+}
+.tomorrow div {
+    float: left;
+}
+
+/******************************************24小时*/
+.hours {
+    background-color: rgba(0,0,0,0.2);
+}
+.hours_title {
+    padding: 15px 0px 8px 0px;
+}
+.hours_block {
+    height: 180px;
+    white-space: nowrap;
+    overflow-x: scroll;
+    padding-left: 10px;
+
+}
+.hour {
+    display: inline-block;
+    white-space: initial;
+    width: 50px;
+    height: 150px;
+}
+.hour_icon {
+    width: 100%;
+    padding: 2px;
+}
+.hour_temp {
+    margin-left: auto;
+    margin-right: auto;
+    width:100%;
+    height: 25px;    
+}
+.hour_weather {
+    margin-left: auto;
+    margin-right: auto;
+    width:100%;
+    height: 50px;    
+}
+.hour_time {
+    width :100%;
+    height: 25px;
+}
+/****************************************一周*/
+.weeks {
+    white-space: nowrap;
+    overflow-x: scroll;
+    overflow-y: hidden;
+    height: 350px;
+}
+.week {
+    display: inline-block;
+    width: 13%;
+}
+.weeks [class^="week_"] {
+    padding-bottom: 8px;
+}
+.weeks [class$="icon"] {
+    width: 100%;
+    max-width: 40px;
+    padding:5px;
+}
+/*****************************************生活指数*/
+.indexs {
+    background-color: rgba(0,0,0,0.2);
+}
+.index_title {
+    padding:15px 0px 15px 0px;
+}
+.index_block {
+    width: 100%;  
+    height: 75px;
+    font-size: medium;
+    overflow: hidden;
+    clear: both;
+}
+.index_name {
+    float: left;
+    width:20%;
+    height:70px;
+}
+.index_text {
+    float: left;
+    text-align: left;
+    width:80%;
+    height:70px;
+    overflow: hidden;
+}
+/*********************************************/

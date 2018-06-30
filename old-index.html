@@ -1,0 +1,32 @@
+<doctype! html>
+<html>
+<head>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=0.5, maximum-scale=2.0, user-scalable=yes" />
+  <link rel="shortcut icon" href="./weather.png">
+  <link type="text/css" rel="stylesheet" href="css/sty.css">   
+  <script src="./js/vue.js"></script>   
+</head>
+<body>
+
+
+
+<div id="vapp">
+    <div>Hello Here</div>
+    <p>{{vnowweather.msg}}</p>
+    <p>{{vnowweather.result.city}}</p>
+
+    <button @click="lo">lo</button>
+    <button @click="sw">sw</button>
+    <button @click="vupup">vupup</button>
+</div>
+
+<button onclick="outsidechange()">switch outside</button>
+
+
+</div>
+
+
+<script src="./js/qweather.js"></script>
+</body>
+</html>
